@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Talentify Consultant is a talent and HR consultancy in Cairo: recruitment, training, labor law advice, HR systems for startups and payroll.">
+<meta name="description" content="Talentify Consultant is an HR consultancy in Cairo: practical HR courses, HR consulting for companies, and staffing supply of trained cleaning and security staff for malls and compounds.">
 <meta name="theme-color" content="#231F20">
 <meta property="og:title" content="Talentify Consultant">
-<meta property="og:description" content="Let's find the right fit for your team. Recruitment, training, labor law, HR systems and payroll.">
+<meta property="og:description" content="HR courses, HR consulting, and cleaning & security staff supply for malls and compounds.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -91,8 +91,8 @@ section{padding-block:clamp(56px,9vw,104px)}
 .sec-h p{margin-top:14px;color:var(--muted)}
 
 .services{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.svc{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.svc:nth-child(n+4){grid-column:span 3}
+.svc{grid-column:span 3;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.svc:nth-child(n+5){grid-column:span 2}
 .blk{width:40px;height:40px;position:relative}
 .blk::before,.blk::after{content:"";position:absolute;border-radius:6px}
 .blk{direction:ltr}
@@ -170,8 +170,7 @@ html[lang="ar"] select{background-position:left 12px center}
 @media (max-width:900px){
   .hero,.book-grid{grid-template-columns:1fr}
   .services{grid-template-columns:1fr 1fr}
-  .svc,.svc:nth-child(n+4){grid-column:span 1}
-  .svc:last-child{grid-column:1/-1}
+  .svc{grid-column:span 1}
   .steps{grid-template-columns:1fr 1fr;row-gap:36px}
   .values{grid-template-columns:1fr 1fr}
 }
@@ -202,22 +201,22 @@ html[lang="ar"] select{background-position:left 12px center}
     </nav>
     <header class="hero" id="top">
       <div>
-        <p class="eyebrow" data-i18n="hero_eyebrow">Talent and HR consultancy</p>
-        <h1 style="margin-top:14px" data-i18n-html="hero_h1">Let's find the right fit for <em>your team.</em></h1>
-        <p class="lead" data-i18n="hero_lead">We connect organisations with the right people and help both grow. Hiring, training, contracts, HR setup and payroll, with plain advice you can act on.</p>
+        <p class="eyebrow" data-i18n="hero_eyebrow">HR consultancy · Cairo</p>
+        <h1 style="margin-top:14px" data-i18n-html="hero_h1">Great teams don't happen by <em>accident.</em></h1>
+        <p class="lead" data-i18n="hero_lead">HR courses that build real skills, consulting and recruitment for companies, and trained cleaning and security staff for malls and compounds. One team for all of it.</p>
         <div class="actions">
           <a class="btn btn-mint" href="#book" data-i18n="cta">Book a consultation</a>
           <a class="btn btn-line" href="#services" data-i18n="hero_see">See our services</a>
         </div>
         <p class="meta"><span data-i18n="meta1">We reply within 24 hours</span><span data-i18n="meta2">No jargon, no pressure</span></p>
       </div>
-      <aside class="short" aria-label="Example of a candidate shortlist">
-        <div class="short-h"><b data-i18n="sl_role">Sales Manager</b><span data-i18n="sl_tag">Shortlist</span></div>
-        <p class="role" data-i18n="sl_sub">3 of 14 screened candidates, ranked by fit</p>
-        <div class="cand"><div class="av" style="background:#CFFFE6" data-i18n="c1i">OF</div><div><div class="nm" data-i18n="c1n">Omar Fathy</div><div class="sub" data-i18n="c1s">7 years · Available now</div></div><div class="score">92%</div><div class="bar"><i style="width:92%"></i></div></div>
-        <div class="cand"><div class="av" style="background:#FFE9BE" data-i18n="c2i">MA</div><div><div class="nm" data-i18n="c2n">Mariam Adel</div><div class="sub" data-i18n="c2s">6 years · Notice 30 days</div></div><div class="score">88%</div><div class="bar"><i style="width:88%"></i></div></div>
-        <div class="cand"><div class="av" style="background:#E7E1D0" data-i18n="c3i">YS</div><div><div class="nm" data-i18n="c3n">Youssef Samir</div><div class="sub" data-i18n="c3s">5 years · Notice 60 days</div></div><div class="score">81%</div><div class="bar"><i style="width:81%"></i></div></div>
-        <p class="note" data-i18n="sl_note">Sample data, shown to illustrate how a shortlist looks.</p>
+      <aside class="short" aria-label="Example of a site staffing plan">
+        <div class="short-h"><b data-i18n="sl_role">Mall staffing plan</b><span data-i18n="sl_tag">Example</span></div>
+        <p class="role" data-i18n="sl_sub">A typical monthly supply for one site</p>
+        <div class="cand"><div class="av" style="background:#CFFFE6" data-i18n="c1i">CL</div><div><div class="nm" data-i18n="c1n">Cleaning crew</div><div class="sub" data-i18n="c1s">12 staff · Daily shifts</div></div><div class="score">12</div><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="cand"><div class="av" style="background:#FFE9BE" data-i18n="c2i">SC</div><div><div class="nm" data-i18n="c2n">Security guards</div><div class="sub" data-i18n="c2s">8 staff · 24/7 coverage</div></div><div class="score">8</div><div class="bar"><i style="width:66%"></i></div></div>
+        <div class="cand"><div class="av" style="background:#E7E1D0" data-i18n="c3i">SV</div><div><div class="nm" data-i18n="c3n">Supervisors</div><div class="sub" data-i18n="c3s">2 staff · On site</div></div><div class="score">2</div><div class="bar"><i style="width:17%"></i></div></div>
+        <p class="note" data-i18n="sl_note">Sample plan. Every site gets its own staffing mix and quote.</p>
       </aside>
     </header>
   </div>
@@ -228,15 +227,14 @@ html[lang="ar"] select{background-position:left 12px center}
   <div class="wrap">
     <div class="sec-h">
       <p class="eyebrow" data-i18n="nav_services">Services</p>
-      <h2 data-i18n="svc_h">Everything your team needs, from the first hire to the monthly payslip</h2>
-      <p data-i18n="svc_p">Use one service or all five. Each starts with a short conversation about what you need.</p>
+      <h2 data-i18n="svc_h">Four services, one goal: a business that runs on good people</h2>
+      <p data-i18n="svc_p">Courses, consulting, recruitment or staffing. Each starts with a short conversation about what you need.</p>
     </div>
     <div class="services">
-      <article class="svc" style="--c:var(--mint)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s1t">Recruitment</h3><p data-i18n="s1p">We source, screen and shortlist candidates so you only interview people who fit the role and the team.</p><ul><li data-i18n="s1a">Role scoping with your team</li><li data-i18n="s1b">Screened shortlist in days</li><li data-i18n="s1c">Interview scheduling and feedback</li></ul></article>
-      <article class="svc" style="--c:var(--gold)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s2t">Training and development</h3><p data-i18n="s2p">Practical programs for managers and staff, built around the skills your business needs next.</p><ul><li data-i18n="s2a">Skills gap assessment</li><li data-i18n="s2b">Workshops and coaching</li><li data-i18n="s2c">Progress tracking per employee</li></ul></article>
-      <article class="svc" style="--c:var(--mint)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s3t">Labor law advice</h3><p data-i18n="s3p">Clear guidance on contracts, policies and disputes, so decisions about people stay on solid ground.</p><ul><li data-i18n="s3a">Employment contract review</li><li data-i18n="s3b">Internal policy drafting</li><li data-i18n="s3c">Guidance on terminations and disputes</li></ul></article>
-      <article class="svc" style="--c:var(--gold)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s4t">HR systems for startups</h3><p data-i18n="s4p">Lightweight HR foundations for young companies: roles, onboarding, leave and records in one place.</p><ul><li data-i18n="s4a">Org chart and role descriptions</li><li data-i18n="s4b">Onboarding checklists</li><li data-i18n="s4c">Leave and records setup</li></ul></article>
-      <article class="svc" style="--c:var(--mint)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s5t" data-i18n="o5">Payroll</h3><p data-i18n="s5p">Monthly payroll handled end to end, including insurance and tax deductions.</p><ul><li data-i18n="s5a">Monthly salary processing</li><li data-i18n="s5b">Insurance and tax deductions</li><li data-i18n="s5c">Payslips for every employee</li></ul></article>
+      <article class="svc" style="--c:var(--mint)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s1t">HR courses</h3><p data-i18n="s1p">Practical HR courses for fresh graduates and working professionals, built around the skills the job market actually asks for.</p><ul><li data-i18n="s1a">Tracks from HR basics to advanced</li><li data-i18n="s1b">Hands-on practice on real cases</li><li data-i18n="s1c">Certificate of completion</li></ul></article>
+      <article class="svc" style="--c:var(--gold)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s2t">HR consulting</h3><p data-i18n="s2p">We help your company run the people side properly: contracts, policies, org structure and payroll, in plain words you can act on.</p><ul><li data-i18n="s2a">Contracts, policies and labor law</li><li data-i18n="s2b">Org structure and job descriptions</li><li data-i18n="s2c">Payroll and insurance setup</li></ul></article>
+      <article class="svc" style="--c:var(--mint)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s3t">Corporate recruitment</h3><p data-i18n="s3p">A company sends us the role under contract. We source and screen candidates to its exact specifications, it interviews the finalists and hires the best fit.</p><ul><li data-i18n="s3a">Any role, from graphic designer to HR manager</li><li data-i18n="s3b">Sourced and vetted to your spec</li><li data-i18n="s3c">You interview only the finalists</li></ul></article>
+      <article class="svc" style="--c:var(--gold)"><div class="blk" aria-hidden="true"></div><h3 data-i18n="s4t">Cleaning and security staff supply</h3><p data-i18n="s4p">Trained cleaning and security staff for malls, compounds and facilities, supplied and fully managed by us.</p><ul><li data-i18n="s4a">Cleaning crews and security guards</li><li data-i18n="s4b">Supervised, with guaranteed replacements</li><li data-i18n="s4c">Monthly contracts that scale with your site</li></ul></article>
     </div>
   </div>
 </section>
@@ -291,7 +289,7 @@ html[lang="ar"] select{background-position:left 12px center}
         <div class="f"><label for="c" data-i18n="l_co">Company</label><input id="c" autocomplete="organization"></div>
       </div>
       <div class="f"><label for="t" data-i18n="l_topic">What do you need help with?</label>
-        <select id="t"><option data-i18n="o1">Hiring</option><option data-i18n="o2">Training</option><option data-i18n="o3">Contracts</option><option data-i18n="o4">HR systems</option><option data-i18n="s5t" data-i18n="o5">Payroll</option></select></div>
+        <select id="t"><option data-i18n="o1">HR course</option><option data-i18n="o2">HR consulting</option><option data-i18n="o3">Corporate recruitment</option><option data-i18n="o4">Cleaning and security staff supply</option><option data-i18n="o5">Something else</option></select></div>
       <div class="f"><label for="m" data-i18n="l_msg">A few lines about your situation</label><textarea id="m" placeholder="We need to hire a sales manager in Cairo within six weeks." data-i18n-ph="ph_msg"></textarea></div>
       <button class="btn btn-mint" type="submit" id="go" data-i18n="go">Prepare my request</button>
       <div class="out" id="out" role="status"></div>
@@ -327,58 +325,53 @@ var I18N = {
   "nav_how": "How we work",
   "nav_principles": "Principles",
   "cta": "Book a consultation",
-  "hero_eyebrow": "Talent and HR consultancy",
-  "hero_lead": "We connect organisations with the right people and help both grow. Hiring, training, contracts, HR setup and payroll, with plain advice you can act on.",
+  "hero_eyebrow": "HR consultancy · Cairo",
+  "hero_lead": "HR courses that build real skills, consulting and recruitment for companies, and trained cleaning and security staff for malls and compounds. One team for all of it.",
   "hero_see": "See our services",
   "meta1": "We reply within 24 hours",
-  "meta2": "No jargon, no pressure",
-  "sl_role": "Sales Manager",
-  "sl_tag": "Shortlist",
-  "sl_sub": "3 of 14 screened candidates, ranked by fit",
-  "c1i": "OF",
-  "c1n": "Omar Fathy",
-  "c1s": "7 years · Available now",
-  "c2i": "MA",
-  "c2n": "Mariam Adel",
-  "c2s": "6 years · Notice 30 days",
-  "c3i": "YS",
-  "c3n": "Youssef Samir",
-  "c3s": "5 years · Notice 60 days",
-  "sl_note": "Sample data, shown to illustrate how a shortlist looks.",
-  "svc_h": "Everything your team needs, from the first hire to the monthly payslip",
-  "svc_p": "Use one service or all five. Each starts with a short conversation about what you need.",
-  "s1t": "Recruitment",
-  "s1p": "We source, screen and shortlist candidates so you only interview people who fit the role and the team.",
-  "s1a": "Role scoping with your team",
-  "s1b": "Screened shortlist in days",
-  "s1c": "Interview scheduling and feedback",
-  "s2t": "Training and development",
-  "s2p": "Practical programs for managers and staff, built around the skills your business needs next.",
-  "s2a": "Skills gap assessment",
-  "s2b": "Workshops and coaching",
-  "s2c": "Progress tracking per employee",
-  "s3t": "Labor law advice",
-  "s3p": "Clear guidance on contracts, policies and disputes, so decisions about people stay on solid ground.",
-  "s3a": "Employment contract review",
-  "s3b": "Internal policy drafting",
-  "s3c": "Guidance on terminations and disputes",
-  "s4t": "HR systems for startups",
-  "s4p": "Lightweight HR foundations for young companies: roles, onboarding, leave and records in one place.",
-  "s4a": "Org chart and role descriptions",
-  "s4b": "Onboarding checklists",
-  "s4c": "Leave and records setup",
-  "s5t": "Payroll",
-  "s5p": "Monthly payroll handled end to end, including insurance and tax deductions.",
-  "s5a": "Monthly salary processing",
-  "s5b": "Insurance and tax deductions",
-  "s5c": "Payslips for every employee",
+  "meta2": "Courses, consulting, recruitment and staffing under one roof",
+  "sl_role": "Mall staffing plan",
+  "sl_tag": "Example",
+  "sl_sub": "A typical monthly supply for one site",
+  "c1i": "CL",
+  "c1n": "Cleaning crew",
+  "c1s": "12 staff · Daily shifts",
+  "c2i": "SC",
+  "c2n": "Security guards",
+  "c2s": "8 staff · 24/7 coverage",
+  "c3i": "SV",
+  "c3n": "Supervisors",
+  "c3s": "2 staff · On site",
+  "sl_note": "Sample plan. Every site gets its own staffing mix and quote.",
+  "svc_h": "Four services, one goal: a business that runs on good people",
+  "svc_p": "Courses, consulting, recruitment or staffing. Each starts with a short conversation about what you need.",
+  "s1t": "HR courses",
+  "s1p": "Practical HR courses for fresh graduates and working professionals, built around the skills the job market actually asks for.",
+  "s1a": "Tracks from HR basics to advanced",
+  "s1b": "Hands-on practice on real cases",
+  "s1c": "Certificate of completion",
+  "s2t": "HR consulting",
+  "s2p": "We help your company run the people side properly: contracts, policies, org structure and payroll, in plain words you can act on.",
+  "s2a": "Contracts, policies and labor law",
+  "s2b": "Org structure and job descriptions",
+  "s2c": "Payroll and insurance setup",
+  "s3t": "Corporate recruitment",
+  "s3p": "A company sends us the role under contract. We source and screen candidates to its exact specifications, it interviews the finalists and hires the best fit.",
+  "s3a": "Any role, from graphic designer to HR manager",
+  "s3b": "Sourced and vetted to your spec",
+  "s3c": "You interview only the finalists",
+  "s4t": "Cleaning and security staff supply",
+  "s4p": "Trained cleaning and security staff for malls, compounds and facilities, supplied and fully managed by us.",
+  "s4a": "Cleaning crews and security guards",
+  "s4b": "Supervised, with guaranteed replacements",
+  "s4c": "Monthly contracts that scale with your site",
   "ap_h": "Four steps, and you always know what comes next",
   "st1t": "Listen",
-  "st1p": "A short call about your team, your goals and what is not working today.",
+  "st1p": "A short call about your team, your site or your career goals.",
   "st2t": "Recommend",
   "st2p": "We tell you what we recommend, and why, in plain words.",
   "st3t": "Deliver",
-  "st3p": "We do the work with you: shortlists, programs, policies or payroll.",
+  "st3p": "We do the work: courses, shortlists or staff on your site.",
   "st4t": "Follow up",
   "st4p": "We check that it worked, and adjust until it does.",
   "pr_h": "How we think, and how we talk",
@@ -405,20 +398,20 @@ var I18N = {
   "l_co": "Company",
   "l_topic": "What do you need help with?",
   "l_msg": "A few lines about your situation",
-  "o1": "Hiring",
-  "o2": "Training",
-  "o3": "Contracts",
-  "o4": "HR systems",
-  "o5": "Payroll",
+  "o1": "HR course",
+  "o2": "HR consulting",
+  "o3": "Corporate recruitment",
+  "o4": "Cleaning and security staff supply",
+  "o5": "Something else",
   "go": "Prepare my request",
   "send_wa": "Send on WhatsApp",
   "copy_req": "Copy request",
-  "hero_h1": "Let's find the right fit for <em>your team.</em>",
+  "hero_h1": "Great teams don't happen by <em>accident.</em>",
   "say_h": "We say",
   "nosay_h": "We don't say",
   "hint": "This page does not send messages itself. WhatsApp opens with your request filled in. You can also copy it and send it to us.",
   "foot": "© 2026 Talentify Consultant. Cairo, Egypt. · <bdi>01042635352</bdi>",
-  "ph_msg": "We need to hire a sales manager in Cairo within six weeks.",
+  "ph_msg": "We need cleaning and security staff for our compound.",
   "m_hello": "Hello Talentify team,",
   "m_about": "I would like to book a consultation about: ",
   "m_name": "Name: ",
@@ -435,58 +428,53 @@ var I18N = {
   "nav_how": "طريقة عملنا",
   "nav_principles": "مبادئنا",
   "cta": "احجز استشارة",
-  "hero_eyebrow": "استشارات المواهب والموارد البشرية",
-  "hero_lead": "بنربط المؤسسات بالناس المناسبين ونساعد الطرفين على النمو. توظيف وتدريب وعقود وتأسيس للموارد البشرية ورواتب، بنصيحة واضحة تقدر تنفّذها.",
+  "hero_eyebrow": "استشارات موارد بشرية · القاهرة",
+  "hero_lead": "كورسات HR بتبني مهارات حقيقية، استشارات وتوظيف للشركات، وعمالة نظافة وأمن مدربة للمولات والكمبوندات. فريق واحد لكل ده.",
   "hero_see": "شوف خدماتنا",
   "meta1": "بنرد خلال 24 ساعة",
-  "meta2": "من غير تعقيد ولا ضغط",
-  "sl_role": "مدير مبيعات",
-  "sl_tag": "القائمة المختصرة",
-  "sl_sub": "3 مرشحين من 14 تم فحصهم، مرتبين حسب الملاءمة",
-  "c1i": "ع ف",
-  "c1n": "عمر فتحي",
-  "c1s": "7 سنين خبرة · متاح فورًا",
-  "c2i": "م ع",
-  "c2n": "مريم عادل",
-  "c2s": "6 سنين خبرة · إشعار 30 يوم",
-  "c3i": "ي س",
-  "c3n": "يوسف سمير",
-  "c3s": "5 سنين خبرة · إشعار 60 يوم",
-  "sl_note": "بيانات تجريبية، لتوضيح شكل القائمة المختصرة.",
-  "svc_h": "كل اللي فريقك محتاجه، من أول تعيين لحد مرتب آخر الشهر",
-  "svc_p": "استخدم خدمة واحدة أو الخمسة. كل خدمة بتبدأ بمحادثة قصيرة عن احتياجك.",
-  "s1t": "التوظيف",
-  "s1p": "بنبحث ونفحص ونرشّح، فتقابل بس الناس المناسبين للوظيفة وللفريق.",
-  "s1a": "تحديد الوظيفة مع فريقك",
-  "s1b": "قائمة مرشحين مفحوصين في أيام",
-  "s1c": "جدولة المقابلات وجمع الملاحظات",
-  "s2t": "التدريب والتطوير",
-  "s2p": "برامج عملية للمديرين والموظفين، مبنية على المهارات اللي شغلك محتاجها بعد كده.",
-  "s2a": "تقييم فجوة المهارات",
-  "s2b": "ورش عمل وكوتشينج",
-  "s2c": "متابعة تقدم كل موظف",
-  "s3t": "الاستشارات العمالية",
-  "s3p": "إرشاد واضح للعقود والسياسات والنزاعات، عشان قراراتك بخصوص الناس تبقى على أرض ثابتة.",
-  "s3a": "مراجعة عقود العمل",
-  "s3b": "صياغة السياسات الداخلية",
-  "s3c": "إرشاد في الفصل والنزاعات",
-  "s4t": "نظم الموارد البشرية للشركات الناشئة",
-  "s4p": "أساسات موارد بشرية خفيفة للشركات الصغيرة: الوظائف والتعيين الجديد والإجازات والسجلات في مكان واحد.",
-  "s4a": "الهيكل التنظيمي ووصف الوظائف",
-  "s4b": "قوائم استقبال الموظفين الجدد",
-  "s4c": "إعداد الإجازات والسجلات",
-  "s5t": "الرواتب",
-  "s5p": "إدارة الرواتب شهريًا من الألف للياء، شاملة التأمينات والضرائب.",
-  "s5a": "معالجة الرواتب الشهرية",
-  "s5b": "خصومات التأمينات والضرائب",
-  "s5c": "قسيمة راتب لكل موظف",
+  "meta2": "كورسات واستشارات وتوظيف وتوريد عمالة تحت سقف واحد",
+  "sl_role": "خطة عمالة لمول",
+  "sl_tag": "مثال",
+  "sl_sub": "توريد شهري نموذجي لموقع واحد",
+  "c1i": "نظ",
+  "c1n": "طاقم نظافة",
+  "c1s": "12 فرد · ورديات يومية",
+  "c2i": "أم",
+  "c2n": "أفراد أمن",
+  "c2s": "8 أفراد · تغطية 24 ساعة",
+  "c3i": "إش",
+  "c3n": "مشرفون",
+  "c3s": "2 · على الموقع",
+  "sl_note": "خطة توضيحية. كل موقع بياخد مزيج عمالة وعرض سعر خاص بيه.",
+  "svc_h": "أربع خدمات وهدف واحد: شغل ماشي بناس كويسة",
+  "svc_p": "كورسات أو استشارات أو توظيف أو توريد عمالة. كل خدمة بتبدأ بمكالمة قصيرة عن احتياجك.",
+  "s1t": "كورسات الموارد البشرية",
+  "s1p": "كورسات عملية لحديثي التخرج والشغالين في المجال، مبنية على المهارات اللي سوق العمل بيطلبها فعلًا.",
+  "s1a": "مسارات من الأساسيات للمستوى المتقدم",
+  "s1b": "تطبيق عملي على حالات حقيقية",
+  "s1c": "شهادة إتمام لكل متدرب",
+  "s2t": "استشارات الموارد البشرية",
+  "s2p": "بنساعد شركتك تظبط شغل الناس: عقود وسياسات وهيكل تنظيمي ومرتبات، بكلام واضح تقدر تنفّذه.",
+  "s2a": "عقود وسياسات وقانون عمل",
+  "s2b": "هيكل تنظيمي ووصف وظيفي",
+  "s2c": "تأسيس المرتبات والتأمينات",
+  "s3t": "توظيف للشركات",
+  "s3p": "الشركة بتبعتلنا الوظيفة بعقد بينا وبينها. إحنا بنبحث ونفحص المرشحين على المواصفات المطلوبة بالظبط، والشركة بتقابل النهائيين وبتختار الأنسب.",
+  "s3a": "أي وظيفة، من جرافيك ديزاينر لمدير HR",
+  "s3b": "ترشيح وفحص على مواصفاتك",
+  "s3c": "إنت بتقابل النهائيين بس",
+  "s4t": "توريد عمالة النظافة والأمن",
+  "s4p": "بنوفر عمالة نظافة وأمن مدربة للمولات والكمبوندات والمنشآت، وبنديرها بالكامل.",
+  "s4a": "أطقم نظافة وأفراد أمن",
+  "s4b": "إشراف مستمر وبديل مضمون",
+  "s4c": "عقود شهرية تكبر مع موقعك",
   "ap_h": "أربع خطوات، وإنت دايمًا عارف الجاي",
   "st1t": "نسمع",
-  "st1p": "مكالمة قصيرة عن فريقك وأهدافك واللي مش ماشي دلوقتي.",
+  "st1p": "مكالمة قصيرة عن فريقك أو موقعك أو أهدافك المهنية.",
   "st2t": "نوصي",
   "st2p": "بنقولك بنوصي بإيه وليه، بكلام بسيط.",
   "st3t": "ننفّذ",
-  "st3p": "بننفّذ معاك: قوائم مرشحين أو برامج أو سياسات أو رواتب.",
+  "st3p": "بننفّذ معاك: كورسات أو قوائم مرشحين أو عمالة على موقعك.",
   "st4t": "نتابع",
   "st4p": "بنتأكد إنه نجح، ونعدّل لحد ما ينجح.",
   "pr_h": "إزاي بنفكر وإزاي بنتكلم",
@@ -513,20 +501,20 @@ var I18N = {
   "l_co": "الشركة",
   "l_topic": "محتاج مساعدة في إيه؟",
   "l_msg": "كام سطر عن وضعك",
-  "o1": "التوظيف",
-  "o2": "التدريب",
-  "o3": "العقود",
-  "o4": "نظم الموارد البشرية",
-  "o5": "الرواتب",
+  "o1": "كورس HR",
+  "o2": "استشارة موارد بشرية",
+  "o3": "توظيف للشركات",
+  "o4": "توريد عمالة نظافة وأمن",
+  "o5": "حاجة تانية",
   "go": "جهّز طلبي",
   "send_wa": "ابعت على واتساب",
   "copy_req": "انسخ الطلب",
-  "hero_h1": "خلّينا نلاقي الشخص المناسب <em>لفريقك.</em>",
+  "hero_h1": "الفريق الكويس مش بييجي <em>بالصدفة.</em>",
   "say_h": "إحنا بنقول",
   "nosay_h": "إحنا مش بنقول",
   "hint": "الصفحة دي مش بتبعت رسايل بنفسها. واتساب بيفتح والطلب مكتوب جاهز. وتقدر كمان تنسخه وتبعته لنا.",
   "foot": "© 2026 Talentify Consultant. القاهرة، مصر. · <bdi>01042635352</bdi>",
-  "ph_msg": "محتاجين نوظف مدير مبيعات في القاهرة خلال ستة أسابيع.",
+  "ph_msg": "محتاجين عمالة نظافة وأمن للكمبوند بتاعنا.",
   "m_hello": "أهلًا فريق Talentify،",
   "m_about": "عايز أحجز استشارة بخصوص: ",
   "m_name": "الاسم: ",
