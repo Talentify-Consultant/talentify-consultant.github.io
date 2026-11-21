@@ -9,7 +9,7 @@ Open `index.html` and find `var I18N` near the bottom. Every sentence is listed 
 The WhatsApp number appears in the contact card, the WhatsApp links and the footer in `index.html`. Search for `01042635352` and `201042635352` to change it.
 
 ## Social icons
-The Instagram, Facebook and LinkedIn icons in the footer are visual only for now. Near the bottom of `index.html` find `var SOCIAL` and paste each page address between the quotes. The icon then becomes a link.
+The footer has a LinkedIn icon linked to the company page. To add Instagram or Facebook, copy the `<a class="soc" ...>` line in the footer of `index.html`, change the `href` and the icon.
 
 ## Publish with GitHub Pages
 Settings > Pages > Source: Deploy from a branch > `main` / `(root)`. The site goes live at `https://<username>.github.io/<repo>/` after a minute.
