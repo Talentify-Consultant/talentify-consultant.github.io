@@ -14,6 +14,9 @@ The footer has Instagram, Facebook and LinkedIn icons. LinkedIn is linked to the
 ## Publish with GitHub Pages
 Settings > Pages > Source: Deploy from a branch > `main` / `(root)`. The site goes live at `https://<username>.github.io/<repo>/` after a minute.
 
+## Web app
+The installable app version lives in `app/` and opens at `/app/`. On a phone, open it and choose Add to Home Screen. Edit the text inside `app/index.html`.
+
 ## Files
 - `index.html`: the whole site (styles and script included)
 - `logo.png`: Talentify Consultant logo (for dark backgrounds)

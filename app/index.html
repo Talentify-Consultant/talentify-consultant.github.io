@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#231F20">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Talentify">
+<meta name="description" content="Talentify Consultant app: HR courses, HR consulting, corporate recruitment, and cleaning & security staff supply.">
+<title>Talentify Consultant</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ink:#231F20; --ink2:#2C2728; --line:#3A3435;
+  --mint:#3FFFA8; --mint-soft:#CFFFE6; --gold:#E39E25; --cream:#F9F3E4;
+  --fg:#F9F3E4; --muted:#B5ADAE;
+  --radius:18px;
+  --font:'Cairo',system-ui,sans-serif;
+}
+html[lang="en"]{--font:'Poppins','Cairo',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.7;min-height:100dvh}
+html[lang="en"] body{line-height:1.6}
+button,input,select,textarea{font-family:inherit}
+a{color:inherit}
+
+.app{max-width:480px;margin-inline:auto;min-height:100dvh;display:flex;flex-direction:column;background:var(--ink);position:relative}
+
+/* top bar */
+.topbar{display:flex;align-items:center;gap:10px;padding:14px 18px;padding-top:calc(14px + env(safe-area-inset-top));border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(35,31,32,.92);backdrop-filter:blur(10px);z-index:10}
+.topbar img{height:34px;width:auto;display:block}
+.topbar .tt{line-height:1.3;flex:1}
+.topbar .tt b{display:block;font-size:15px;font-weight:800}
+.topbar .tt span{font-size:11px;color:var(--muted)}
+.lang{flex:none;min-height:34px;padding:0 14px;border-radius:10px;border:1.5px solid var(--line);background:transparent;color:var(--fg);font:700 12.5px var(--font);cursor:pointer}
+.lang:active{transform:scale(.96)}
+
+/* views */
+.view{display:none;padding:20px 18px 110px;flex:1;animation:fade .25s ease}
+.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* home */
+.hero-card{background:linear-gradient(160deg,var(--ink2),#1c1919);border:1px solid var(--line);border-radius:24px;padding:26px 22px;margin-bottom:18px}
+.hero-card .kicker{font-size:12px;font-weight:700;color:var(--gold);margin-bottom:10px}
+.hero-card h1{font-size:26px;font-weight:800;line-height:1.5}
+html[lang="en"] .hero-card h1{font-weight:700;line-height:1.25;letter-spacing:-0.01em}
+.hero-card h1 em{font-style:normal;color:var(--mint)}
+.hero-card p{color:var(--muted);font-size:14px;margin-top:10px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;border:0;border-radius:16px;background:var(--mint);color:var(--ink);font-size:16px;font-weight:800;cursor:pointer;text-decoration:none;transition:transform .12s}
+html[lang="en"] .cta{font-weight:700}
+.cta:active{transform:scale(.98)}
+.cta.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px var(--line)}
+.sec-t{font-size:13px;font-weight:700;color:var(--muted);margin:22px 0 12px}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;cursor:pointer;text-align:start;color:var(--fg);display:flex;flex-direction:column;gap:8px}
+.chip:active{transform:scale(.98)}
+.chip .blk{width:30px;height:30px;position:relative;direction:ltr;flex:none}
+.chip .blk::before,.chip .blk::after{content:"";position:absolute;border-radius:5px}
+.chip .blk::before{left:0;top:0;width:30px;height:13px;background:var(--cream)}
+.chip .blk::after{left:10px;top:16px;width:11px;height:14px;background:var(--c)}
+.chip b{font-size:14px;font-weight:700;line-height:1.5}
+.chip span{font-size:11.5px;color:var(--muted);line-height:1.5}
+.stat{display:flex;gap:10px;margin-top:18px}
+.stat div{flex:1;background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;font-size:12px;color:var(--muted)}
+.stat b{display:block;color:var(--mint);font-size:17px;font-weight:800}
+
+/* services */
+.svc{background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:14px}
+.svc .hd{display:flex;align-items:center;gap:12px}
+.svc .blk{width:40px;height:40px;position:relative;direction:ltr;flex:none}
+.svc .blk::before,.svc .blk::after{content:"";position:absolute;border-radius:7px}
+.svc .blk::before{left:0;top:0;width:40px;height:18px;background:var(--cream)}
+.svc .blk::after{left:14px;top:22px;width:14px;height:18px;background:var(--c)}
+.svc h2{font-size:17px;font-weight:800}
+.svc .ds{color:var(--muted);font-size:13.5px;margin:10px 0 0}
+.svc ul{list-style:none;margin-top:12px;border-top:1px solid var(--line);padding-top:12px;display:grid;gap:7px;font-size:13.5px}
+.svc li{display:flex;gap:9px;align-items:flex-start}
+.svc li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;border-radius:2px;background:var(--gold)}
+.svc .go{margin-top:14px;min-height:46px;font-size:14.5px}
+
+/* form */
+.f{display:grid;gap:6px;margin-bottom:14px}
+label{font-size:13px;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;font-size:16px;color:var(--fg);background:var(--ink2);border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;min-height:50px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--mint)}
+input::placeholder,textarea::placeholder{color:#7C7475}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B5ADAE' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center}
+html[dir="ltr"] select{background-position:right 14px center}
+.out{background:var(--ink2);border:1.5px dashed var(--mint);border-radius:14px;padding:14px;font-size:13.5px;white-space:pre-wrap;word-break:break-word;display:none;margin-top:14px}
+.out.on{display:block}
+.row{display:flex;gap:10px;margin-top:12px}
+.row[hidden]{display:none}
+.row .cta{flex:1}
+.hint{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+
+/* contact */
+.ct-card{display:block;background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:12px;text-decoration:none}
+.ct-card small{display:block;font-size:11px;color:var(--muted);font-weight:700;margin-bottom:4px}
+.ct-card b{font-size:16px;font-weight:700}
+.ct-card .sub{font-size:12.5px;color:var(--mint);margin-top:2px}
+a.ct-card:active{transform:scale(.99)}
+
+/* bottom nav */
+.tabbar{position:fixed;bottom:0;inset-inline:0;z-index:20}
+.tabbar .in{max-width:480px;margin-inline:auto;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(44,39,40,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 12px;background:none;border:0;color:var(--muted);font-size:11px;font-weight:700;cursor:pointer}
+.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--mint)}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <img src="logo.png" alt="Talentify Consultant">
+  <div class="tt"><b>Talentify Consultant</b><span data-i18n="brand_sub">تالنتيفاي للموارد البشرية</span></div>
+  <button class="lang" id="lang" type="button">English</button>
+</header>
+
+<main class="view on" id="v-home">
+  <div class="hero-card">
+    <p class="kicker" data-i18n="hero_kicker">استشارات موارد بشرية · القاهرة</p>
+    <h1 data-i18n-html="hero_h1">الفريق الكويس مش بييجي <em>بالصدفة.</em></h1>
+    <p data-i18n="hero_p">كورسات HR بتبني مهارات حقيقية، استشارات وتوظيف للشركات، وعمالة نظافة وأمن مدربة للمولات والكمبوندات. فريق واحد لكل ده.</p>
+  </div>
+  <button class="cta" data-go="book" data-i18n="cta_book">احجز استشارة</button>
+  <p class="sec-t" data-i18n="sec_services">خدماتنا</p>
+  <div class="chips">
+    <button class="chip" style="--c:var(--mint)" data-go="services"><span class="blk"></span><b data-i18n="s1t">كورسات الموارد البشرية</b><span data-i18n="s1c_sub">من الأساسيات للمستوى المتقدم</span></button>
+    <button class="chip" style="--c:var(--gold)" data-go="services"><span class="blk"></span><b data-i18n="s2t">استشارات الموارد البشرية</b><span data-i18n="s2c_sub">عقود وسياسات وهيكل تنظيمي</span></button>
+    <button class="chip" style="--c:var(--mint)" data-go="services"><span class="blk"></span><b data-i18n="s3t">توظيف للشركات</b><span data-i18n="s3c_sub">ترشيح وفحص على مواصفاتك</span></button>
+    <button class="chip" style="--c:var(--gold)" data-go="services"><span class="blk"></span><b data-i18n="s4t">توريد عمالة النظافة والأمن</b><span data-i18n="s4c_sub">للمولات والكمبوندات</span></button>
+  </div>
+  <div class="stat">
+    <div><b data-i18n="stat1b">24 ساعة</b><span data-i18n="stat1s">أقصى وقت للرد عليك</span></div>
+    <div><b data-i18n="stat2b">4 خدمات</b><span data-i18n="stat2s">تحت سقف واحد</span></div>
+  </div>
+</main>
+
+<main class="view" id="v-services">
+  <article class="svc">
+    <div class="hd"><span class="blk" style="--c:var(--mint)"></span><h2 data-i18n="s1t">كورسات الموارد البشرية</h2></div>
+    <p class="ds" data-i18n="s1p">كورسات عملية لحديثي التخرج والشغالين في المجال، مبنية على المهارات اللي سوق العمل بيطلبها فعلًا.</p>
+    <ul><li data-i18n="s1a">مسارات من الأساسيات للمستوى المتقدم</li><li data-i18n="s1b">تطبيق عملي على حالات حقيقية</li><li data-i18n="s1c">شهادة إتمام لكل متدرب</li></ul>
+    <button class="cta go" data-book="o1" data-i18n="svc_go">اطلب الخدمة</button>
+  </article>
+  <article class="svc">
+    <div class="hd"><span class="blk" style="--c:var(--gold)"></span><h2 data-i18n="s2t">استشارات الموارد البشرية</h2></div>
+    <p class="ds" data-i18n="s2p">بنساعد شركتك تظبط شغل الناس: عقود وسياسات وهيكل تنظيمي ومرتبات، بكلام واضح تقدر تنفّذه.</p>
+    <ul><li data-i18n="s2a">عقود وسياسات وقانون عمل</li><li data-i18n="s2b">هيكل تنظيمي ووصف وظيفي</li><li data-i18n="s2c">تأسيس المرتبات والتأمينات</li></ul>
+    <button class="cta go" data-book="o2" data-i18n="svc_go">اطلب الخدمة</button>
+  </article>
+  <article class="svc">
+    <div class="hd"><span class="blk" style="--c:var(--mint)"></span><h2 data-i18n="s3t">توظيف للشركات</h2></div>
+    <p class="ds" data-i18n="s3p">الشركة بتبعتلنا الوظيفة بعقد بينا وبينها. إحنا بنبحث ونفحص المرشحين على المواصفات المطلوبة بالظبط، والشركة بتقابل النهائيين وبتختار الأنسب.</p>
+    <ul><li data-i18n="s3a">أي وظيفة، من جرافيك ديزاينر لمدير HR</li><li data-i18n="s3b">ترشيح وفحص على مواصفاتك</li><li data-i18n="s3c">إنت بتقابل النهائيين بس</li></ul>
+    <button class="cta go" data-book="o3" data-i18n="svc_go">اطلب الخدمة</button>
+  </article>
+  <article class="svc">
+    <div class="hd"><span class="blk" style="--c:var(--gold)"></span><h2 data-i18n="s4t">توريد عمالة النظافة والأمن</h2></div>
+    <p class="ds" data-i18n="s4p">بنوفر عمالة نظافة وأمن مدربة للمولات والكمبوندات والمنشآت، وبنديرها بالكامل.</p>
+    <ul><li data-i18n="s4a">أطقم نظافة وأفراد أمن</li><li data-i18n="s4b">إشراف مستمر وبديل مضمون</li><li data-i18n="s4c">عقود شهرية تكبر مع موقعك</li></ul>
+    <button class="cta go" data-book="o4" data-i18n="svc_go">اطلب الخدمة</button>
+  </article>
+</main>
+
+<main class="view" id="v-book">
+  <p class="sec-t" style="margin-top:0" data-i18n="bk_title">احجز أو استفسر</p>
+  <div class="f"><label for="bk-s" data-i18n="l_service">الخدمة</label>
+    <select id="bk-s">
+      <option value="o1" data-i18n="o1">كورس HR</option>
+      <option value="o2" data-i18n="o2">استشارة موارد بشرية</option>
+      <option value="o3" data-i18n="o3">توظيف للشركات</option>
+      <option value="o4" data-i18n="o4">توريد عمالة نظافة وأمن</option>
+      <option value="o5" data-i18n="o5">حاجة تانية</option>
+    </select></div>
+  <div class="f"><label for="bk-n" data-i18n="l_name">اسمك</label><input id="bk-n" autocomplete="name" data-i18n-ph="ph_name" placeholder="اسمك الكامل"></div>
+  <div class="f"><label for="bk-c" data-i18n="l_company">الشركة (لو فيه)</label><input id="bk-c" autocomplete="organization" data-i18n-ph="ph_company" placeholder="اسم الشركة أو المول أو الكمبوند"></div>
+  <div class="f"><label for="bk-m" data-i18n="l_msg">كام سطر عن اللي محتاجه</label><textarea id="bk-m" data-i18n-ph="ph_msg" placeholder="مثال: محتاجين عمالة نظافة وأمن للكمبوند بتاعنا"></textarea></div>
+  <button class="cta" id="bk-go" data-i18n="go">جهّز طلبي</button>
+  <div class="out" id="bk-out" role="status"></div>
+  <div class="row" id="bk-after" hidden>
+    <a class="cta" id="bk-wa" href="https://wa.me/201042635352" target="_blank" rel="noopener" data-i18n="send_wa">ابعت على واتساب</a>
+    <button class="cta ghost" id="bk-copy" data-i18n="copy_req">انسخ الطلب</button>
+  </div>
+  <p class="hint" data-i18n="hint">التطبيق مش بيبعت لوحده. واتساب بيفتح والطلب مكتوب جاهز، أو انسخه وابعته لنا بنفسك. بنرد خلال 24 ساعة.</p>
+</main>
+
+<main class="view" id="v-contact">
+  <p class="sec-t" style="margin-top:0" data-i18n="ct_title">كلمنا في أي وقت</p>
+  <a class="ct-card" href="https://wa.me/201042635352" target="_blank" rel="noopener"><small data-i18n="ct_wa">واتساب وموبايل</small><b dir="ltr">01042635352</b><span class="sub" data-i18n="ct_wa_sub">افتح محادثة واتساب</span></a>
+  <a class="ct-card" href="tel:+201042635352"><small data-i18n="ct_call">مكالمة تليفون</small><b data-i18n="ct_call_b">اتصل بينا دلوقتي</b><span class="sub" data-i18n="ct_call_sub">اتصال مباشر</span></a>
+  <a class="ct-card" href="https://www.linkedin.com/company/147018915/" target="_blank" rel="noopener"><small data-i18n="ct_li">لينكدإن</small><b>Talentify Consultant</b><span class="sub" data-i18n="ct_li_sub">تابع صفحة الشركة</span></a>
+  <a class="ct-card" href="https://talentify-consultant.github.io/" target="_blank" rel="noopener"><small data-i18n="ct_site">الموقع الإلكتروني</small><b dir="ltr">talentify-consultant.github.io</b><span class="sub" data-i18n="ct_site_sub">افتح الموقع</span></a>
+  <p class="hint" data-i18n="ct_foot">القاهرة، مصر · بنرد خلال 24 ساعة</p>
+</main>
+
+<nav class="tabbar"><div class="in">
+  <button class="tab on" data-tab="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M9.5 21.5v-7h5v7"/></svg><span data-i18n="tab_home">الرئيسية</span></button>
+  <button class="tab" data-tab="services"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span data-i18n="tab_services">الخدمات</span></button>
+  <button class="tab" data-tab="book"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M4 10.5h16"/></svg><span data-i18n="tab_book">احجز</span></button>
+  <button class="tab" data-tab="contact"><svg viewBox="0 0 24 24"><path d="M21 15.5a4 4 0 0 1-4 4H8l-5 3.5v-15A4 4 0 0 1 7 4h10a4 4 0 0 1 4 4z"/></svg><span data-i18n="tab_contact">تواصل</span></button>
+</div></nav>
+</div>
+<script>
+var I18N={
+"ar":{
+ "brand_sub":"تالنتيفاي للموارد البشرية",
+ "hero_kicker":"استشارات موارد بشرية · القاهرة",
+ "hero_h1":"الفريق الكويس مش بييجي <em>بالصدفة.</em>",
+ "hero_p":"كورسات HR بتبني مهارات حقيقية، استشارات وتوظيف للشركات، وعمالة نظافة وأمن مدربة للمولات والكمبوندات. فريق واحد لكل ده.",
+ "cta_book":"احجز استشارة",
+ "sec_services":"خدماتنا",
+ "s1c_sub":"من الأساسيات للمستوى المتقدم",
+ "s2c_sub":"عقود وسياسات وهيكل تنظيمي",
+ "s3c_sub":"ترشيح وفحص على مواصفاتك",
+ "s4c_sub":"للمولات والكمبوندات",
+ "stat1b":"24 ساعة","stat1s":"أقصى وقت للرد عليك",
+ "stat2b":"4 خدمات","stat2s":"تحت سقف واحد",
+ "s1t":"كورسات الموارد البشرية",
+ "s1p":"كورسات عملية لحديثي التخرج والشغالين في المجال، مبنية على المهارات اللي سوق العمل بيطلبها فعلًا.",
+ "s1a":"مسارات من الأساسيات للمستوى المتقدم","s1b":"تطبيق عملي على حالات حقيقية","s1c":"شهادة إتمام لكل متدرب",
+ "s2t":"استشارات الموارد البشرية",
+ "s2p":"بنساعد شركتك تظبط شغل الناس: عقود وسياسات وهيكل تنظيمي ومرتبات، بكلام واضح تقدر تنفّذه.",
+ "s2a":"عقود وسياسات وقانون عمل","s2b":"هيكل تنظيمي ووصف وظيفي","s2c":"تأسيس المرتبات والتأمينات",
+ "s3t":"توظيف للشركات",
+ "s3p":"الشركة بتبعتلنا الوظيفة بعقد بينا وبينها. إحنا بنبحث ونفحص المرشحين على المواصفات المطلوبة بالظبط، والشركة بتقابل النهائيين وبتختار الأنسب.",
+ "s3a":"أي وظيفة، من جرافيك ديزاينر لمدير HR","s3b":"ترشيح وفحص على مواصفاتك","s3c":"إنت بتقابل النهائيين بس",
+ "s4t":"توريد عمالة النظافة والأمن",
+ "s4p":"بنوفر عمالة نظافة وأمن مدربة للمولات والكمبوندات والمنشآت، وبنديرها بالكامل.",
+ "s4a":"أطقم نظافة وأفراد أمن","s4b":"إشراف مستمر وبديل مضمون","s4c":"عقود شهرية تكبر مع موقعك",
+ "svc_go":"اطلب الخدمة",
+ "bk_title":"احجز أو استفسر",
+ "l_service":"الخدمة","l_name":"اسمك","l_company":"الشركة (لو فيه)","l_msg":"كام سطر عن اللي محتاجه",
+ "ph_name":"اسمك الكامل","ph_company":"اسم الشركة أو المول أو الكمبوند",
+ "ph_msg":"مثال: محتاجين عمالة نظافة وأمن للكمبوند بتاعنا",
+ "o1":"كورس HR","o2":"استشارة موارد بشرية","o3":"توظيف للشركات","o4":"توريد عمالة نظافة وأمن","o5":"حاجة تانية",
+ "go":"جهّز طلبي","send_wa":"ابعت على واتساب","copy_req":"انسخ الطلب","copied":"تم النسخ ✓",
+ "hint":"التطبيق مش بيبعت لوحده. واتساب بيفتح والطلب مكتوب جاهز، أو انسخه وابعته لنا بنفسك. بنرد خلال 24 ساعة.",
+ "ct_title":"كلمنا في أي وقت",
+ "ct_wa":"واتساب وموبايل","ct_wa_sub":"افتح محادثة واتساب",
+ "ct_call":"مكالمة تليفون","ct_call_b":"اتصل بينا دلوقتي","ct_call_sub":"اتصال مباشر",
+ "ct_li":"لينكدإن","ct_li_sub":"تابع صفحة الشركة",
+ "ct_site":"الموقع الإلكتروني","ct_site_sub":"افتح الموقع",
+ "ct_foot":"القاهرة، مصر · بنرد خلال 24 ساعة",
+ "tab_home":"الرئيسية","tab_services":"الخدمات","tab_book":"احجز","tab_contact":"تواصل",
+ "m_hello":"أهلًا فريق Talentify،","m_about":"عايز أستفسر عن: ","m_name":"الاسم: ","m_co":"الشركة: ","m_none":"(مش مذكور)",
+ "switch":"English"
+},
+"en":{
+ "brand_sub":"HR consultancy · Cairo",
+ "hero_kicker":"HR consultancy · Cairo",
+ "hero_h1":"Great teams don't happen by <em>accident.</em>",
+ "hero_p":"HR courses that build real skills, consulting and recruitment for companies, and trained cleaning and security staff for malls and compounds. One team for all of it.",
+ "cta_book":"Book a consultation",
+ "sec_services":"Our services",
+ "s1c_sub":"From basics to advanced",
+ "s2c_sub":"Contracts, policies, org structure",
+ "s3c_sub":"Sourced and vetted to your spec",
+ "s4c_sub":"For malls and compounds",
+ "stat1b":"24 hours","stat1s":"Maximum reply time",
+ "stat2b":"4 services","stat2s":"Under one roof",
+ "s1t":"HR courses",
+ "s1p":"Practical HR courses for fresh graduates and working professionals, built around the skills the job market actually asks for.",
+ "s1a":"Tracks from HR basics to advanced","s1b":"Hands-on practice on real cases","s1c":"Certificate of completion",
+ "s2t":"HR consulting",
+ "s2p":"We help your company run the people side properly: contracts, policies, org structure and payroll, in plain words you can act on.",
+ "s2a":"Contracts, policies and labor law","s2b":"Org structure and job descriptions","s2c":"Payroll and insurance setup",
+ "s3t":"Corporate recruitment",
+ "s3p":"A company sends us the role under contract. We source and screen candidates to its exact specifications, it interviews the finalists and hires the best fit.",
+ "s3a":"Any role, from graphic designer to HR manager","s3b":"Sourced and vetted to your spec","s3c":"You interview only the finalists",
+ "s4t":"Cleaning and security staff supply",
+ "s4p":"Trained cleaning and security staff for malls, compounds and facilities, supplied and fully managed by us.",
+ "s4a":"Cleaning crews and security guards","s4b":"Supervised, with guaranteed replacements","s4c":"Monthly contracts that scale with your site",
+ "svc_go":"Request this service",
+ "bk_title":"Book or ask",
+ "l_service":"Service","l_name":"Your name","l_company":"Company (optional)","l_msg":"A few lines about what you need",
+ "ph_name":"Your full name","ph_company":"Company, mall or compound name",
+ "ph_msg":"Example: we need cleaning and security staff for our compound",
+ "o1":"HR course","o2":"HR consulting","o3":"Corporate recruitment","o4":"Cleaning and security staff supply","o5":"Something else",
+ "go":"Prepare my request","send_wa":"Send on WhatsApp","copy_req":"Copy request","copied":"Copied ✓",
+ "hint":"The app does not send anything itself. WhatsApp opens with your request filled in, or copy it and send it to us yourself. We reply within 24 hours.",
+ "ct_title":"Reach us anytime",
+ "ct_wa":"WhatsApp and phone","ct_wa_sub":"Open WhatsApp chat",
+ "ct_call":"Phone call","ct_call_b":"Call us now","ct_call_sub":"Direct call",
+ "ct_li":"LinkedIn","ct_li_sub":"Follow the company page",
+ "ct_site":"Website","ct_site_sub":"Open the site",
+ "ct_foot":"Cairo, Egypt · We reply within 24 hours",
+ "tab_home":"Home","tab_services":"Services","tab_book":"Book","tab_contact":"Contact",
+ "m_hello":"Hello Talentify team,","m_about":"I would like to ask about: ","m_name":"Name: ","m_co":"Company: ","m_none":"(not given)",
+ "switch":"العربية"
+}};
+
+(function(){
+  var KEY='talentify-app-lang', lang='ar';
+  var views={home:'v-home',services:'v-services',book:'v-book',contact:'v-contact'};
+  var tabs=document.querySelectorAll('.tab');
+  var out=document.getElementById('bk-out'),after=document.getElementById('bk-after'),cp=document.getElementById('bk-copy');
+  function t(k){return (I18N[lang]&&I18N[lang][k])||I18N.ar[k]||k}
+  function apply(l){
+    lang=l; var d=document.documentElement; d.lang=l; d.dir=(l==='ar'?'rtl':'ltr');
+    document.title=(l==='ar')?'Talentify Consultant | تالنتيفاي':'Talentify Consultant';
+    document.querySelectorAll('[data-i18n]').forEach(function(n){n.textContent=t(n.getAttribute('data-i18n'))});
+    document.querySelectorAll('[data-i18n-html]').forEach(function(n){n.innerHTML=t(n.getAttribute('data-i18n-html'))});
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(n){n.placeholder=t(n.getAttribute('data-i18n-ph'))});
+    document.getElementById('lang').textContent=t('switch');
+    if(out.classList.contains('on')) build();
+  }
+  function go(name){
+    Object.keys(views).forEach(function(k){document.getElementById(views[k]).classList.toggle('on',k===name)});
+    tabs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-tab')===name)});
+    window.scrollTo({top:0});
+    try{history.replaceState(null,'','#'+name)}catch(e){}
+  }
+  tabs.forEach(function(x){x.addEventListener('click',function(){go(x.getAttribute('data-tab'))})});
+  document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){go(b.getAttribute('data-go'))})});
+  document.querySelectorAll('[data-book]').forEach(function(b){b.addEventListener('click',function(){
+    document.getElementById('bk-s').value=b.getAttribute('data-book'); go('book');
+  })});
+  function v(id){return document.getElementById(id).value.trim()}
+  function build(){
+    var sel=document.getElementById('bk-s');
+    var lines=[t('m_hello'),'',t('m_about')+sel.options[sel.selectedIndex].text+'.'];
+    if(v('bk-m')) lines.push('',v('bk-m'));
+    lines.push('',t('m_name')+(v('bk-n')||t('m_none')),t('m_co')+(v('bk-c')||t('m_none')));
+    out.textContent=lines.join('\n'); out.classList.add('on'); after.hidden=false;
+    document.getElementById('bk-wa').href='https://wa.me/201042635352?text='+encodeURIComponent(out.textContent);
+    out.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  document.getElementById('bk-go').addEventListener('click',build);
+  document.getElementById('bk-s').addEventListener('change',function(){if(out.classList.contains('on'))build()});
+  cp.addEventListener('click',function(){
+    var text=out.textContent;
+    function done(){cp.textContent=t('copied');setTimeout(function(){cp.textContent=t('copy_req')},1800)}
+    function fb(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fb)}else{fb()}
+  });
+  document.getElementById('lang').addEventListener('click',function(){
+    var n=(lang==='ar')?'en':'ar'; apply(n);
+    try{localStorage.setItem(KEY,n)}catch(e){}
+  });
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  apply((saved==='en'||saved==='ar')?saved:'ar');
+  var h=(location.hash||'').replace('#','');
+  if(views[h]) go(h);
+  if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
+})();
+</script>
+</body>
+</html>
