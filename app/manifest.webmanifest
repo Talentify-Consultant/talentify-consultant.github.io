@@ -1,7 +1,7 @@
 {
   "name": "Talentify Consultant",
   "short_name": "Talentify",
-  "description": "كورسات HR، استشارات موارد بشرية، توظيف للشركات، وتوريد عمالة نظافة وأمن.",
+  "description": "كورسات HR واستشارات موارد بشرية.",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./index.html",
