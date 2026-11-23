@@ -119,7 +119,7 @@ a.ct-card:active{transform:scale(.99)}
 
 /* Talentify tools, November 2026 */
 .tools-heading{font-size:25px;line-height:1.5;margin:4px 0 8px}.tools-lead{font-size:13px;color:var(--muted);margin-bottom:18px}.tool-card{background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:18px;margin:12px 0}.tool-card h2{font-size:18px;margin-bottom:6px}.tool-card p{font-size:13px;color:var(--muted)}.tool-card button{margin-top:14px}.tool-badge{display:inline-block;color:var(--mint);font-size:11px;font-weight:800;margin-bottom:7px}.tool-switch{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}.tool-switch button,.answer{border:1px solid var(--line);border-radius:12px;background:var(--ink2);color:var(--fg);padding:10px 14px;font-size:13px;cursor:pointer}.tool-switch button.active,.answer.selected{border-color:var(--mint);background:#203a2d;color:var(--mint)}.calc-field{margin:15px 0}.calc-field label{display:block;font-size:13px;margin-bottom:7px}.calc-field input,.calc-field select{width:100%;padding:12px;border:1px solid #665e60;border-radius:12px;background:var(--ink);color:var(--fg);font-size:15px;min-height:48px}.calc-field input[type=checkbox]{width:20px;min-height:20px;vertical-align:middle;accent-color:var(--mint);margin-inline-end:8px}.result-box{border:1px solid var(--mint);border-radius:18px;padding:18px;background:#1e3027;margin:18px 0;white-space:pre-line;font-size:14px}.result-box strong{font-size:29px;color:var(--mint);display:block;line-height:1.4;margin:6px 0}.legal-note{font-size:11.5px!important;color:var(--muted);line-height:1.9;margin:14px 0}.tool-back{display:block;border:0;background:none;color:var(--mint);font-size:13px;padding:0;margin-bottom:14px;cursor:pointer}.tools-src{font-size:12px;color:var(--muted);padding:15px 0}.tools-src a{color:var(--mint);display:block;margin:8px 0;overflow-wrap:anywhere}.quiz-progress{height:5px;background:var(--line);border-radius:5px;margin:14px 0 22px;overflow:hidden}.quiz-progress span{height:100%;background:var(--mint);display:block;transition:width .2s}.quiz-question{font-size:20px;line-height:1.7;margin:10px 0 20px}.answer{display:block;width:100%;text-align:start;min-height:54px;margin:10px 0;font-size:14px}.quiz-actions{display:flex;gap:10px;margin-top:20px}.quiz-actions button{flex:1}.quiz-actions button:disabled{opacity:.4;cursor:not-allowed}.score-ring{width:120px;height:120px;border-radius:50%;border:7px solid var(--mint);display:grid;place-content:center;margin:16px auto;text-align:center}.score-ring strong{font-size:29px;line-height:1.3}.score-ring small{max-width:95px;line-height:1.3;color:var(--muted);font-size:10px}.gap-item{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.gap-item b{display:block;color:var(--gold);margin-bottom:5px}.gap-item span{color:var(--muted)}.quiz-summary{white-space:pre-line;font-size:12px;color:var(--muted);margin:15px 0}.warning{color:#ffc971!important}.tools-small{font-size:12px;margin:8px 0;color:var(--muted)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:3px}.tabbar .in{grid-template-columns:repeat(5,1fr)}
-</style>
+.share-card{background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:18px;margin:16px 0;text-align:center}.share-card h2{font-size:18px;margin-bottom:6px}.share-card p{font-size:13px;color:var(--muted);margin-bottom:12px}.share-card img{width:176px;height:176px;border-radius:14px;background:#fff;padding:6px;display:block;margin:0 auto 14px}.share-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.share-row .cta,.share-row button{margin:0;text-decoration:none;display:flex;align-items:center;justify-content:center;text-align:center}.share-link{direction:ltr;font-size:12px;color:var(--mint);margin:10px 0 0;overflow-wrap:anywhere}.install-card{position:relative;background:var(--ink2);border:1px solid var(--mint);border-radius:20px;padding:18px;margin:16px 0;text-align:center}.install-card[hidden]{display:none}.install-card h2{font-size:18px;margin-bottom:6px}.install-card p{font-size:13px;color:var(--muted);margin-bottom:12px}.ins-x{position:absolute;top:6px;inset-inline-end:8px;background:none;border:0;color:var(--muted);font-size:14px;padding:8px;cursor:pointer}</style>
 </head>
 <body>
 <div class="app">
@@ -136,12 +136,19 @@ a.ct-card:active{transform:scale(.99)}
     <p data-i18n="hero_p">كورسات HR بتبني مهارات حقيقية، واستشارات بتظبط شغل الموارد البشرية في شركتك. فريق واحد للاتنين.</p>
   </div>
   <button class="cta" data-go="book" data-i18n="cta_book">احجز استشارة</button>
+  <div class="install-card" id="install-card" hidden>
+    <button class="ins-x" id="ins-x" type="button" aria-label="close">✕</button>
+    <h2 data-i18n="ins_title">ثبّت التطبيق على موبايلك</h2>
+    <p id="ins-text" data-i18n="ins_android">من قائمة المتصفح اختار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».</p>
+    <button class="cta" id="ins-go" type="button" data-i18n="ins_ok">تمام</button>
+  </div>
   <p class="sec-t" data-i18n="sec_services">خدماتنا</p>
   <div class="chips">
     <button class="chip" style="--c:var(--mint)" data-go="services"><span class="blk"></span><b data-i18n="s1t">كورسات الموارد البشرية</b><span data-i18n="s1c_sub">من الأساسيات للمستوى المتقدم</span></button>
     <button class="chip" style="--c:var(--gold)" data-go="services"><span class="blk"></span><b data-i18n="s2t">استشارات الموارد البشرية</b><span data-i18n="s2c_sub">عقود وسياسات وهيكل تنظيمي</span></button>
   </div>
-<p class="sec-t" data-i18n="tools_title">أدوات HR لشركتك</p><div class="chips"><button class="chip" data-go="tools" style="--c:var(--mint)"><span class="blk"></span><b data-i18n="calc_title">حاسبات قانون العمل</b><span data-i18n="calc_sub">إجازات، إخطار، مكافأة وتأمينات</span></button><button class="chip" data-go="tools" data-start-quiz style="--c:var(--gold)"><span class="blk"></span><b data-i18n="quiz_title">قيّم الـ HR في شركتك</b><span data-i18n="quiz_sub">10 أسئلة وخطة للخطوة الجاية</span></button></div>  <div class="stat">
+<p class="sec-t" data-i18n="tools_title">أدوات HR لشركتك</p><div class="chips"><button class="chip" data-go="tools" style="--c:var(--mint)"><span class="blk"></span><b data-i18n="calc_title">حاسبات قانون العمل</b><span data-i18n="calc_sub">إجازات، إخطار، مكافأة وتأمينات</span></button><button class="chip" data-go="tools" data-start-quiz style="--c:var(--gold)"><span class="blk"></span><b data-i18n="quiz_title">قيّم الـ HR في شركتك</b><span data-i18n="quiz_sub">10 أسئلة وخطة للخطوة الجاية</span></button></div>  <button class="cta ghost" data-go="contact" data-share style="margin:12px 0" data-i18n="sh_title">شارك التطبيق</button>
+  <div class="stat">
     <div><b data-i18n="stat1b">24 ساعة</b><span data-i18n="stat1s">أقصى وقت للرد عليك</span></div>
     <div><b data-i18n="stat2b">خدمتين</b><span data-i18n="stat2s">تحت سقف واحد</span></div>
   </div>
@@ -188,6 +195,19 @@ a.ct-card:active{transform:scale(.99)}
   <a class="ct-card" href="tel:+201042635352"><small data-i18n="ct_call">مكالمة تليفون</small><b data-i18n="ct_call_b">اتصل بينا دلوقتي</b><span class="sub" data-i18n="ct_call_sub">اتصال مباشر</span></a>
   <a class="ct-card" href="https://www.linkedin.com/company/147018915/" target="_blank" rel="noopener"><small data-i18n="ct_li">لينكدإن</small><b>Talentify Consultant</b><span class="sub" data-i18n="ct_li_sub">تابع صفحة الشركة</span></a>
   <a class="ct-card" href="https://talentify-consultant.github.io/" target="_blank" rel="noopener"><small data-i18n="ct_site">الموقع الإلكتروني</small><b dir="ltr">talentify-consultant.github.io</b><span class="sub" data-i18n="ct_site_sub">افتح الموقع</span></a>
+  <div class="share-card" id="share">
+    <h2 data-i18n="sh_title">شارك التطبيق</h2>
+    <p data-i18n="sh_sub">اللي جنبك يفتحه بمسح الكود، من غير ما يدور في المتصفح.</p>
+    <img alt="QR" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAHpElEQVR4nO3cQY4rNQBFUYJ6ISCx/xUhwU6KKSOrwdeyXX3O9CtJVdL/qgZP/jzP8wtA59fdFwC8jawAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFiXzMv/uO336vrOMSff/81+Nd19zv+3F3G9ztzzWf+5bzvjmbMfBueVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NTKduzG5eiMG+93fM0zm+Nd7zy2awt749/GDE8rQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0Bs4cp27Ma165kn3c587o1L2XV2XfON/xfGPK0AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALFtK9sbnbmjPXOxOjZzR+/7Nt7H0woQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKELOy/Q9+2vrzzDNWd50ozPd5WgFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYttWtjeuTsdm7mjdQnfX6nTX73vjEvp9/xc8rQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAsYUr2/edKjqz0dz12rEzr/nG14697//CmKcVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSD2eZ5n9zVcY2YreeYZq2euP3ed7XrmSbc38rQCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsSmVrbrzg0dW/fOZ37u2JlXNbbuXNgzT6s9837HZq7Z0woQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEPuaefHMDm/dyaDrFo27PvfGc3DPXH/usmuDu4unFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgNnWW7TpnLjh3bWFv3KT+tF3p+85XdpYtcBBZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxqbNs19l1euvMKnHXmbJ2tN934xJ617cxw9MKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChCbWtnu2v+deX7nmc7caJ55Hu3Yug3ujaviMU8rQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0Ds8zzPord+33Zwxpm70nVL2V0b3Bv/NtbZdb+eVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NTK9sYd7a5t6K47Glu3s/xpfxuWwf/maQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiC08y3bszLXrjF0bzbH3LTjP/K52vfPM567jaQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiH3NvHhmo3njqbFju5aUM953LuzYmbvh9/G0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEpla269y4s1x31umMXVe17o5mFro3nkc7tuv83TFPK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitA7PM8z/9+8fuWhTOfO3bmWbZjZ543PLbrmmfeeezM72rM0woQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJta2c74aSvMM197oxvvd93vO2Pd53paAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFi21a2M85c6J65lVznp50au8uNd+RpBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWITa1s37dYnbHrtNqx921wb3TmebTOsgWuIStATFaAmKwAMVkBYrICxGQFiMkKEJMVILbtLNszl5TrVolnrl1vvKN1dt3vmd+zlS1wEFkBYrICxGQFiMkKEJMVICYrQExWgJisALGvdW+963zWM09Rfd9Ztj/tfNaxG9953d+GpxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVIDa1st11Euqu1emZy+AxW9jvm/nbuHHNvI6nFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUg9nmeZ/c1XGPdQvfM7e/M5575zjPOPFP2zDWzpxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVIDa1st21d1znxn3nriXlmb/+mdvfM3/BdTytADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxr3VvfeY68Myl7Dq7TsmdeecbV6c3rpmdZQtcQ1aAmKwAMVkBYrICxGQFiMkKEJMVICYrQGzhynbsxu3gmUvKM69q5p1n7mjXNa9z4yLZ0woQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKENu2sr3RzKJx3Wt3LXR3bWFv3Gev+/VnPnds5tvwtALEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxKxsMzeedXrjNc+889iuLezYrvNoZ3haAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFi21a2N24H151Wu8uuTeqM9/0Ku6553ed6WgFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYgtXtrvOSV1n11mnu05RnXnnM+933S+4bq8889rxVa3b73paAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFin+d5dl8D8CqeVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWL/AEM0EEJCNEkiAAAAAElFTkSuQmCC">
+    <div class="share-row">
+      <a class="cta" id="sh-wa" target="_blank" rel="noopener" data-i18n="sh_wa">واتساب</a>
+      <a class="cta ghost" id="sh-tg" target="_blank" rel="noopener" data-i18n="sh_tg">تيليجرام</a>
+      <a class="cta ghost" id="sh-sms" data-i18n="sh_sms">رسالة SMS</a>
+      <button class="cta ghost" id="sh-copy" type="button" data-i18n="sh_copy">انسخ اللينك</button>
+    </div>
+    <button class="cta" id="sh-native" type="button" style="margin-top:8px;display:none" data-i18n="sh_more">مشاركة بطرق تانية</button>
+    <p class="share-link">talentify-consultant.github.io/app/</p>
+  </div>
   <p class="hint" data-i18n="ct_foot">القاهرة، مصر · بنرد خلال 24 ساعة</p>
 </main>
 
@@ -275,6 +295,12 @@ var I18N={
 
 Object.assign(I18N.ar,{tools_title:'أدوات HR لشركتك',tools_tab:'أدوات HR',calc_title:'حاسبات قانون العمل',calc_sub:'إجازات، إخطار، مكافأة وتأمينات',quiz_title:'قيّم الـ HR في شركتك',quiz_sub:'10 أسئلة وخطة للخطوة الجاية'});
 Object.assign(I18N.en,{tools_title:'HR tools for your company',tools_tab:'HR tools',calc_title:'Labour law calculators',calc_sub:'Leave, notice, gratuity & insurance',quiz_title:'Your HR self-audit',quiz_sub:'10 questions. Clear next steps.'});
+
+Object.assign(I18N.ar,{ins_title:'ثبّت التطبيق على موبايلك',ins_ready:'خطوة واحدة وهيفتح من الشاشة الرئيسية زي أي تطبيق.',ins_ios:'من زرار مشاركة في سفاري اختار «إضافة إلى الشاشة الرئيسية»، وهيفتح زي أي تطبيق.',ins_android:'من قائمة المتصفح اختار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».',ins_btn:'ثبّت التطبيق',ins_ok:'تمام'});
+Object.assign(I18N.en,{ins_title:'Install the app on your phone',ins_ready:'One tap and it opens from your home screen like any app.',ins_ios:'In Safari, tap Share then "Add to Home Screen" and it opens like any app.',ins_android:'From your browser menu, tap "Install app" or "Add to Home screen".',ins_btn:'Install app',ins_ok:'Got it'});
+
+Object.assign(I18N.ar,{sh_title:'شارك التطبيق',sh_sub:'اللي جنبك يفتحه بمسح الكود، من غير ما يدور في المتصفح.',sh_wa:'واتساب',sh_tg:'تيليجرام',sh_sms:'رسالة SMS',sh_copy:'انسخ اللينك',sh_copied:'اتنسخ ✓',sh_more:'مشاركة بطرق تانية',sh_msg:'جرّب تطبيق Talentify Consultant للموارد البشرية:'});
+Object.assign(I18N.en,{sh_title:'Share the app',sh_sub:'Scan the code to open it instantly, no searching.',sh_wa:'WhatsApp',sh_tg:'Telegram',sh_sms:'SMS',sh_copy:'Copy link',sh_copied:'Copied ✓',sh_more:'More ways to share',sh_msg:'Try the Talentify Consultant HR app:'});
 (function(){
   var KEY='talentify-app-lang', lang='ar';
   var views={home:'v-home',services:'v-services',tools:'v-tools',book:'v-book',contact:'v-contact'};
@@ -326,6 +352,51 @@ Object.assign(I18N.en,{tools_title:'HR tools for your company',tools_tab:'HR too
   var saved=null;
   try{saved=localStorage.getItem(KEY)}catch(e){}
   apply((saved==='en'||saved==='ar')?saved:'ar');
+
+  (function(){
+    var U='https://talentify-consultant.github.io/app/';
+    function msg(){return t('sh_msg')+' '+U}
+    function set(){
+      document.getElementById('sh-wa').href='https://wa.me/?text='+encodeURIComponent(msg());
+      document.getElementById('sh-tg').href='https://t.me/share/url?url='+encodeURIComponent(U)+'&text='+encodeURIComponent(t('sh_msg'));
+      document.getElementById('sh-sms').href='sms:?&body='+encodeURIComponent(msg());
+    }
+    set(); document.getElementById('lang').addEventListener('click',set);
+    var c=document.getElementById('sh-copy');
+    c.addEventListener('click',function(){
+      function ok(){c.textContent=t('sh_copied');setTimeout(function(){c.textContent=t('sh_copy')},1800)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(U).then(ok,function(){prompt('',U)})}else{prompt('',U)}
+    });
+    var n=document.getElementById('sh-native');
+    if(navigator.share){n.style.display='flex';n.addEventListener('click',function(){navigator.share({title:'Talentify Consultant',text:t('sh_msg'),url:U}).catch(function(){})})}
+    document.querySelectorAll('[data-share]').forEach(function(b){b.addEventListener('click',function(){setTimeout(function(){document.getElementById('share').scrollIntoView({behavior:'smooth'})},50)})});
+  })();
+
+  (function(){
+    var card=document.getElementById('install-card');
+    if(!card)return;
+    var installed=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+    var dismissed=false;
+    try{dismissed=localStorage.getItem('tc_ins_dismissed')==='1'}catch(e){}
+    if(installed||dismissed)return;
+    var deferred=null;
+    var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+    var txt=document.getElementById('ins-text'), btn=document.getElementById('ins-go');
+    function close(){card.hidden=true;try{localStorage.setItem('tc_ins_dismissed','1')}catch(e){}}
+    function render(){
+      if(deferred){txt.textContent=t('ins_ready');btn.textContent=t('ins_btn')}
+      else if(ios){txt.textContent=t('ins_ios');btn.textContent=t('ins_ok')}
+      else{txt.textContent=t('ins_android');btn.textContent=t('ins_ok')}
+    }
+    card.hidden=false; render();
+    window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;render()});
+    document.getElementById('lang').addEventListener('click',function(){setTimeout(render,0)});
+    btn.addEventListener('click',function(){
+      if(deferred){var d=deferred;deferred=null;d.prompt();d.userChoice.then(close).catch(close)}
+      else close();
+    });
+    document.getElementById('ins-x').addEventListener('click',close);
+  })();
   var h=(location.hash||'').replace('#','');
   if(views[h]) go(h);
   if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
