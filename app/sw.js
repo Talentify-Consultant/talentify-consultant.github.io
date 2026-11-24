@@ -1,5 +1,5 @@
 /* Cache only the Talentify app shell and its own assets. */
-const CACHE='talentify-app-v6-20261124';
+const CACHE='talentify-app-v7-20261124';
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./logo.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('talentify-app-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
