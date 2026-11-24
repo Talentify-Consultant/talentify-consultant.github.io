@@ -3,7 +3,7 @@
    quiz answers, salary values or outbound URLs containing prefilled messages. */
 (function(){
 'use strict';
-var ID='',KEY='talentify-analytics-consent',active=false,loaded=false;
+var ID='G-R50RQBR2RP',KEY='talentify-analytics-consent',active=false,loaded=false;
 if(!/^G-[A-Z0-9]+$/.test(ID))return;
 var app=location.pathname.indexOf('/app/')===0, path=app?'/app/':'/';
 function read(){try{return localStorage.getItem(KEY)}catch(e){return null}}
