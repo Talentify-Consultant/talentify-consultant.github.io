@@ -6,6 +6,9 @@
 var ID='G-R50RQBR2RP',KEY='talentify-analytics-consent',active=false,loaded=false;
 if(!/^G-[A-Z0-9]+$/.test(ID))return;
 var app=location.pathname.indexOf('/app/')===0, path=app?'/app/':'/';
+var landingPaths=["/hr-courses/","/hr-consulting/","/salary-calculator/","/ats-cv-builder/","/interview-simulator/","/labour-law-calculators/","/hr-self-audit/"];
+var normalized=location.pathname.replace(/index\.html$/,'').replace(/\/?$/,'/');
+if(landingPaths.indexOf(normalized)>=0)path=normalized;
 function read(){try{return localStorage.getItem(KEY)}catch(e){return null}}
 function write(v){try{localStorage.setItem(KEY,v)}catch(e){}}
 // Only fixed event names and enumerated parameters can leave this application.
