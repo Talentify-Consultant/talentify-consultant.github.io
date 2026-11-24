@@ -575,7 +575,7 @@ Object.assign(I18N.ar,{"nav_courses":"الكورسات","nav_consult":"الاس�
     out.textContent=lines.join('\n'); out.classList.add('on'); after.hidden=false;
     document.getElementById('wa').href='https://wa.me/201042635352?text='+encodeURIComponent(out.textContent);
   }
-  form.addEventListener('submit',function(e){e.preventDefault();build()});
+  form.addEventListener('submit',function(e){e.preventDefault();build();if(window.talentifyTrack)window.talentifyTrack('request_prepared',{service:['course','consulting','other'][document.getElementById('t').selectedIndex]||'other'})});
   document.getElementById('t').addEventListener('change',function(){if(out.classList.contains('on'))build()});
   copy.addEventListener('click',function(){
     var text=out.textContent;
