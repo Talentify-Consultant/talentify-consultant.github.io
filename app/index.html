@@ -137,7 +137,7 @@ html{scroll-padding-top:90px}
 .tab span{max-width:100%;overflow-wrap:anywhere}
 @media(max-width:350px){.chips{grid-template-columns:1fr}.topbar{padding-inline:12px}.topbar .tt b{font-size:12px}.tab{font-size:10px}.quiz-actions{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-.salary-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:13px}.salary-line b{text-align:end;white-space:nowrap}.salary-line span{min-width:0;overflow-wrap:anywhere}.tpl-editor{min-height:340px;resize:vertical;white-space:pre-wrap;line-height:1.75}.tpl-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.tpl-actions .cta{font-size:14px;margin:0}#tpl-category{margin-bottom:10px}#tpl-search{margin-bottom:10px}@media(max-width:350px){.tpl-actions{grid-template-columns:1fr}}</style>
+.salary-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:13px}.salary-line b{text-align:end;white-space:nowrap}.salary-line span{min-width:0;overflow-wrap:anywhere}.tpl-editor{min-height:340px;resize:vertical;white-space:pre-wrap;line-height:1.75}.tpl-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.tpl-actions .cta{font-size:14px;margin:0}#tpl-category{margin-bottom:10px}#tpl-search{margin-bottom:10px}@media(max-width:350px){.tpl-actions{grid-template-columns:1fr}}.cv-fields input,.cv-fields textarea{width:100%;min-width:0}.cv-fields textarea{min-height:100px;resize:vertical}.cv-preview{white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;color:#231f20;padding:16px;border-radius:8px;font:14px/1.65 Arial,sans-serif;margin:12px 0}.cv-print-sheet{display:none}@media print{@page{size:A4;margin:16mm}body.cv-printing{background:#fff!important;color:#000!important}body.cv-printing>*:not(.cv-print-sheet){display:none!important}body.cv-printing .cv-print-sheet{display:block!important;color:#000;background:#fff;font:11pt/1.45 Arial,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere} .cv-print-sheet h1{font-size:20pt;margin:0 0 5pt}.cv-print-sheet p{margin:0;orphans:2;widows:2}}</style>
 </head>
 <body>
 <div class="app">
@@ -165,7 +165,7 @@ html{scroll-padding-top:90px}
     <button class="chip" style="--c:var(--mint)" data-go="services"><span class="blk"></span><b data-i18n="s1t">كورسات الموارد البشرية</b><span data-i18n="s1c_sub">من الأساسيات للمستوى المتقدم</span></button>
     <button class="chip" style="--c:var(--gold)" data-go="services"><span class="blk"></span><b data-i18n="s2t">استشارات الموارد البشرية</b><span data-i18n="s2c_sub">عقود وسياسات وهيكل تنظيمي</span></button>
   </div>
-<p class="sec-t" data-i18n="tools_title">أدوات HR لشركتك</p><div class="chips"><button class="chip" data-go="tools" style="--c:var(--mint)"><span class="blk"></span><b data-i18n="calc_title">حاسبات قانون العمل</b><span data-i18n="calc_sub">إجازات، إخطار، مكافأة وتأمينات</span></button><button class="chip" data-go="tools" data-start-quiz style="--c:var(--gold)"><span class="blk"></span><b data-i18n="quiz_title">قيّم الـ HR في شركتك</b><span data-i18n="quiz_sub">10 أسئلة وخطة للخطوة الجاية</span></button><button class="chip" data-go="tools" data-start-salary style="--c:var(--mint)"><span class="blk"></span><b data-i18n="salary_title">حاسبة صافي المرتب</b><span data-i18n="salary_sub">الضرائب والتأمينات · 2026</span></button><button class="chip" data-go="tools" data-start-templates style="--c:var(--gold)"><span class="blk"></span><b data-i18n="templates_title">نماذج HR</b><span data-i18n="templates_sub">عدّل وحمّل النماذج</span></button></div>  <button class="cta ghost" data-go="contact" data-share style="margin:12px 0" data-i18n="sh_title">شارك التطبيق</button>
+<p class="sec-t" data-i18n="tools_title">أدوات HR لشركتك</p><div class="chips"><button class="chip" data-go="tools" style="--c:var(--mint)"><span class="blk"></span><b data-i18n="calc_title">حاسبات قانون العمل</b><span data-i18n="calc_sub">إجازات، إخطار، مكافأة وتأمينات</span></button><button class="chip" data-go="tools" data-start-quiz style="--c:var(--gold)"><span class="blk"></span><b data-i18n="quiz_title">قيّم الـ HR في شركتك</b><span data-i18n="quiz_sub">10 أسئلة وخطة للخطوة الجاية</span></button><button class="chip" data-go="tools" data-start-salary style="--c:var(--mint)"><span class="blk"></span><b data-i18n="salary_title">حاسبة صافي المرتب</b><span data-i18n="salary_sub">الضرائب والتأمينات · 2026</span></button><button class="chip" data-go="tools" data-start-templates style="--c:var(--gold)"><span class="blk"></span><b data-i18n="templates_title">نماذج HR</b><span data-i18n="templates_sub">عدّل وحمّل النماذج</span></button><button class="chip" data-go="tools" data-start-cv style="--c:var(--mint)"><span class="blk"></span><b data-i18n="cv_title">منشئ CV</b><span data-i18n="cv_sub">سيرة ذاتية مناسبة لـ ATS</span></button></div>  <button class="cta ghost" data-go="contact" data-share style="margin:12px 0" data-i18n="sh_title">شارك التطبيق</button>
   <div class="stat">
     <div><b data-i18n="stat1b">24 ساعة</b><span data-i18n="stat1s">أقصى وقت للرد عليك</span></div>
     <div><b data-i18n="stat2b">خدمتين</b><span data-i18n="stat2s">تحت سقف واحد</span></div>
@@ -324,6 +324,7 @@ Object.assign(I18N.ar,{sh_title:'شارك التطبيق',sh_sub:'اللي جن�
 Object.assign(I18N.en,{sh_title:'Share the app',sh_sub:'Scan the code to open it instantly, no searching.',sh_wa:'WhatsApp',sh_tg:'Telegram',sh_sms:'SMS',sh_copy:'Copy link',sh_copied:'Copied ✓',sh_more:'More ways to share',sh_msg:'Try the Talentify Consultant HR app:'});
 Object.assign(I18N.ar,{salary_title:'حاسبة صافي المرتب',salary_sub:'الضرائب والتأمينات · 2026'});Object.assign(I18N.en,{salary_title:'Salary calculator',salary_sub:'Tax & insurance · 2026'});
 Object.assign(I18N.ar,{templates_title:'نماذج HR',templates_sub:'عدّل وحمّل النماذج'});Object.assign(I18N.en,{templates_title:'HR templates',templates_sub:'Edit and download templates'});
+Object.assign(I18N.ar,{cv_title:'منشئ CV',cv_sub:'سيرة ذاتية مناسبة لـ ATS'});Object.assign(I18N.en,{cv_title:'CV builder',cv_sub:'ATS-friendly resume'});
 (function(){
   var KEY='talentify-app-lang', lang='ar';
   var views={home:'v-home',services:'v-services',tools:'v-tools',book:'v-book',contact:'v-contact'};
@@ -458,8 +459,10 @@ if(mode==='hub'){
 root.innerHTML='<span class="tool-badge">TALENTIFY / HR TOOLS</span><h1 class="tools-heading">'+L('شوف الصورة أوضح.','See the picture clearly.')+'</h1><p class="tools-lead">'+L('احسب استحقاق مبدئي، أو اكتشف أولويات تطوير الـ HR في شركتك.','Estimate an entitlement or discover your company’s HR improvement priorities.')+'</p><article class="tool-card"><span class="tool-badge">01 / '+L('حاسبات مصر','EGYPT CALCULATORS')+'</span><h2>'+L('حاسبات قانون العمل','Labour law calculators')+'</h2><p>'+L('الإجازات، الإخطار، مكافأة المادة 172 وتقدير التأمينات لعام 2026.','Leave, notice, Article 172 gratuity and a 2026 insurance estimate.')+'</p>'+button(L('افتح الحاسبات','Open calculators'),'calc')+'</article><article class="tool-card"><span class="tool-badge">02 / '+L('تقييم ذاتي','SELF-AUDIT')+'</span><h2>'+L('قيّم الـ HR في شركتك','Your company’s HR self-audit')+'</h2><p>'+L('10 أسئلة. نتيجة واضحة وأولويات عملية، من غير ما تطلب منك بيانات موظفين.','10 questions. Clear priorities, without employee data.')+'</p>'+button(L('ابدأ التقييم','Start self-audit'),'quiz')+'</article><p class="legal-note">'+L('إجاباتك وحساباتك داخل الصفحة فقط، ولا تُحفظ بعد إغلاقها. لا شيء يُرسل إلا لو اخترت فتح واتساب وإرسال الرسالة بنفسك.','Answers and calculations stay on this page and are not saved after it closes. Nothing is sent unless you choose to open WhatsApp and send the message yourself.')+'</p>';
 root.insertAdjacentHTML('beforeend','<article class="tool-card"><span class="tool-badge">03 / 2026</span><h2>'+L('حاسبة صافي المرتب','Salary calculator')+'</h2><p>'+L('احسب الصافي بعد التأمينات وضريبة المرتبات.','Estimate take-home pay after insurance and salary tax.')+'</p>'+button(L('احسب مرتبك','Calculate salary'),'salary')+'</article>');
 root.insertAdjacentHTML('beforeend','<article class="tool-card"><span class="tool-badge">04 / HR TEMPLATES</span><h2>'+L('مكتبة نماذج HR','HR templates library')+'</h2><p>'+L('9 نماذج إدارية قابلة للتعديل والتحميل.','9 editable, downloadable administrative templates.')+'</p>'+button(L('افتح المكتبة','Open library'),'templates')+'</article>');
+root.insertAdjacentHTML('beforeend','<article class="tool-card"><span class="tool-badge">05 / CAREER TOOLS</span><h2>'+L('منشئ السيرة الذاتية ATS','ATS CV builder')+'</h2><p>'+L('أنشئ سيرة ذاتية بسيطة وحمّلها أو احفظها PDF.','Build a text-first CV, download it or save as PDF.')+'</p>'+button(L('أنشئ سيرتك','Build your CV'),'cv')+'</article>');
 return;
 }
+if(mode==='cv'){renderCV();return;}
 if(mode==='templates'){renderTemplates();return;}
 if(mode==='salary'){renderSalary();return;}
 if(mode==='calc'){renderCalc();return;}
@@ -520,6 +523,40 @@ function renderTemplates(){
  search.addEventListener('input',()=>{tplSearch=search.value;list()});select.addEventListener('change',()=>{tplCategory=select.value;list()});list();root.append(note);
 }
 
+
+let cvData=Object.create(null),cvLanguage='en',cvPreview=false;
+const cvFields=[
+ ['name','الاسم الكامل','Full name',false],['role','المسمى المهني المستهدف','Target job title',false],['email','البريد الإلكتروني','Email',false],['phone','رقم الهاتف','Phone',false],['location','المدينة والدولة','City and country',false],['links','رابط لينكد إن أو البورتفوليو','LinkedIn or portfolio URL',false],['summary','نبذة مهنية','Professional summary',true],['experience','الخبرات العملية','Work experience',true,'المسمى | الشركة | الفترة، ثم المسؤوليات والإنجازات في سطور منفصلة.','Job title | Company | Dates, followed by responsibilities and achievements on separate lines.'],['education','التعليم','Education',true,'المؤهل | المؤسسة | السنة','Degree | Institution | Year'],['skills','المهارات','Skills',true,'مهارات مرتبطة بالوظيفة، مفصولة بفواصل.','Job-relevant skills, separated by commas.'],['certs','الشهادات والكورسات','Certifications & training',true],['languages','اللغات','Languages',true],['projects','المشروعات (اختياري)','Projects (optional)',true]
+];
+function cvText(){
+ const ar=cvLanguage==='ar',head=(a,b)=>ar?a:b,clean=k=>(cvData[k]||'').trim();
+ const lines=[clean('name'),clean('role'),['email','phone','location','links'].map(clean).filter(Boolean).join(' | ')].filter(Boolean);
+ const sections=[['summary','النبذة المهنية','PROFESSIONAL SUMMARY'],['experience','الخبرات العملية','WORK EXPERIENCE'],['education','التعليم','EDUCATION'],['skills','المهارات','SKILLS'],['certs','الشهادات والتدريب','CERTIFICATIONS & TRAINING'],['languages','اللغات','LANGUAGES'],['projects','المشروعات','PROJECTS']];
+ sections.forEach(([k,a,b])=>{if(clean(k))lines.push('',head(a,b),clean(k))});
+ return lines.join('\n');
+}
+function renderCV(){
+ root.replaceChildren();
+ function el(tag,txt,cls){const e=document.createElement(tag);if(txt)e.textContent=txt;if(cls)e.className=cls;return e}
+ function btn(txt,fn,cls='cta'){const b=el('button',txt,cls);b.type='button';b.addEventListener('click',fn);return b}
+ root.append(btn(L('‹ كل أدوات HR','‹ All HR tools'),()=>{mode='hub';render();window.scrollTo({top:0})},'tool-back'),el('span','TALENTIFY / CAREER TOOLS','tool-badge'),el('h1',L('أنشئ سيرتك الذاتية','ATS CV builder'),'tools-heading'),el('p',L('قالب نصي بعمود واحد وعناوين واضحة. اكتب خبراتك الفعلية وخصص الكلمات المفتاحية للوظيفة. لا يوجد ضمان لاجتياز جميع أنظمة ATS.','A single-column, text-first template with standard headings. Use accurate experience and job-relevant keywords. No template guarantees acceptance by every ATS.'),'tools-lead'));
+ const card=el('article','','tool-card'),label=el('label',L('لغة ملف السيرة الذاتية','CV document language'));label.htmlFor='cv-language';const sel=el('select');sel.id='cv-language';[['en','English'],['ar','العربية']].forEach(([v,t])=>{const o=el('option',t);o.value=v;sel.append(o)});sel.value=cvLanguage;sel.addEventListener('change',()=>{cvLanguage=sel.value;renderCV()});card.append(label,sel);
+ const form=el('div','','cv-fields');
+ cvFields.forEach(([k,a,b,multi,ha,hb])=>{
+ const f=el('div','','calc-field'),lab=el('label',L(a,b));lab.htmlFor='cv-'+k;const input=el(multi?'textarea':'input');input.id='cv-'+k;input.dir='auto';input.value=cvData[k]||'';input.maxLength=multi?6000:500;if(multi)input.rows=4;if(ha)input.placeholder=L(ha,hb);input.addEventListener('input',()=>{cvData[k]=input.value;refresh()});f.append(lab,input);form.append(f);
+ });
+ card.append(form);root.append(card);
+ const actions=el('article','','tool-card'),status=el('p','','tools-small');status.setAttribute('role','status');
+ const preview=el('pre','','cv-preview');preview.dir=cvLanguage==='ar'?'rtl':'ltr';preview.hidden=!cvPreview;
+ function refresh(){preview.textContent=cvText();status.textContent=''}
+ function ready(){if(!(cvData.name||'').trim()||!(cvData.role||'').trim()){status.textContent=L('اكتب الاسم والمسمى المهني أولاً.','Enter your name and target job title first.');return false}return true}
+ function download(){if(!ready())return;const url=URL.createObjectURL(new Blob(['\uFEFF',cvText()],{type:'text/plain;charset=utf-8'}));const a=el('a');a.href=url;a.download='Talentify-CV-'+cvLanguage+'.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);status.textContent=L('تم طلب تنزيل الملف.','Download requested.')}
+ async function copy(){if(!ready())return;try{await navigator.clipboard.writeText(cvText());status.textContent=L('تم النسخ.','Copied.')}catch(e){preview.hidden=false;const range=document.createRange();range.selectNodeContents(preview);const s=getSelection();s.removeAllRanges();s.addRange(range);status.textContent=L('تم تحديد النص للنسخ اليدوي.','Text selected for manual copying.')}}
+ function print(){if(!ready())return;const page=el('article','','cv-print-sheet');page.dir=cvLanguage==='ar'?'rtl':'ltr';page.lang=cvLanguage;const text=cvText().split('\n');text.forEach((line,i)=>{const p=el(i===0?'h1':'p',line||' ');page.append(p)});document.body.append(page);document.body.classList.add('cv-printing');try{window.print()}finally{document.body.classList.remove('cv-printing');page.remove()}}
+ actions.append(btn(L('معاينة السيرة الذاتية','Preview CV'),()=>{cvPreview=!cvPreview;preview.hidden=!cvPreview;refresh()}),preview,btn(L('طباعة / حفظ PDF','Print / save PDF'),print),btn(L('تحميل TXT','Download TXT'),download,'cta ghost'),btn(L('نسخ النص','Copy text'),copy,'cta ghost'),btn(L('مسح البيانات','Clear data'),()=>{if(confirm(L('مسح جميع بيانات السيرة الذاتية؟','Clear all CV data?'))){cvData=Object.create(null);cvPreview=false;renderCV()}},'cta ghost'),status);
+ root.append(actions,el('p',L('البيانات في ذاكرة الصفحة فقط؛ لا تُرسل ولا تُحفظ بواسطة الأداة. يمكنك حفظ ملفك بنفسك. تجنب الرقم القومي والصورة والبيانات غير اللازمة. اختر حفظ PDF من نافذة الطباعة إن كان جهازك يدعم ذلك.','Data stays in page memory; this tool does not transmit or store it. Save your own file. Avoid national IDs, photos and unnecessary personal details. Choose Save as PDF in the print dialog if supported.'),'legal-note'));refresh();
+}
+
 function renderCalc(){
 const labels=[['leave',L('الإجازات','Leave')],['notice',L('الإخطار','Notice')],['eos',L('المكافأة','Gratuity')],['insurance',L('التأمينات','Insurance')]];
 let html=back()+'<span class="tool-badge">'+L('مصر · قانون العمل 14/2025','EGYPT · LABOUR LAW 14/2025')+'</span><h1 class="tools-heading">'+L('حاسبات قانون العمل','Labour law calculators')+'</h1><div class="tool-switch">'+labels.map(x=>'<button data-type="'+x[0]+'" class="'+(type===x[0]?'active':'')+'">'+x[1]+'</button>').join('')+'</div><form id="calc-form" class="tool-card">';
@@ -574,11 +611,12 @@ root.addEventListener('click',function(e){
 const a=e.target.closest('[data-action],[data-type],[data-answer]');if(!a)return;
 if(a.hasAttribute('data-type')){type=a.dataset.type;render();return;}
 if(a.hasAttribute('data-answer')){answers[qi]=Number(a.dataset.answer);render();return;}
-switch(a.dataset.action){case 'hub':mode='hub';break;case 'templates':mode='templates';tplSelected='';renderTemplates();window.scrollTo({top:0});return;case 'salary':mode='salary';break;case 'calc':mode='calc';break;case 'quiz':mode='quiz';result=false;break;case 'prev':qi=Math.max(0,qi-1);break;case 'next':if(answers[qi]===null)return;if(qi===9)result=true;else qi++;break;case 'review':qi=0;result=false;break;case 'restart':answers.fill(null);qi=0;result=false;break;case 'course':document.querySelector('[data-tab="book"]').click();document.getElementById('bk-s').value='o1';return;case 'share':{
+switch(a.dataset.action){case 'hub':mode='hub';break;case 'cv':mode='cv';break;case 'templates':mode='templates';tplSelected='';renderTemplates();window.scrollTo({top:0});return;case 'salary':mode='salary';break;case 'calc':mode='calc';break;case 'quiz':mode='quiz';result=false;break;case 'prev':qi=Math.max(0,qi-1);break;case 'next':if(answers[qi]===null)return;if(qi===9)result=true;else qi++;break;case 'review':qi=0;result=false;break;case 'restart':answers.fill(null);qi=0;result=false;break;case 'course':document.querySelector('[data-tab="book"]').click();document.getElementById('bk-s').value='o1';return;case 'share':{
 const box=document.getElementById('quiz-share');box.replaceChildren();const link=document.createElement('a');link.className='cta';link.style.marginTop='12px';link.target='_blank';link.rel='noopener';link.textContent=L('افتح واتساب بالملخص','Open WhatsApp with summary');link.href='https://wa.me/201042635352?text='+encodeURIComponent(summary());box.append(link);return;
 }}
 render();window.scrollTo({top:0});
 });
+document.querySelectorAll('[data-start-cv]').forEach(b=>b.addEventListener('click',()=>{mode='cv';render()}));
 document.querySelectorAll('[data-start-templates]').forEach(b=>b.addEventListener('click',()=>{mode='templates';tplSelected='';render()}));
 document.querySelectorAll('[data-start-salary]').forEach(b=>b.addEventListener('click',()=>{mode='salary';render()}));
 document.querySelectorAll('[data-start-quiz]').forEach(b=>b.addEventListener('click',()=>{mode='quiz';result=false;render()}));
