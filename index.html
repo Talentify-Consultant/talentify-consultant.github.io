@@ -222,7 +222,19 @@ nav img{min-width:140px;height:auto;max-width:160px}
 @media(max-width:1000px){nav{flex-wrap:wrap}.navlinks{flex-wrap:wrap;justify-content:flex-end}.navlinks a:not(.btn){display:inline-flex}}
 @media(max-width:760px){.app-grid{grid-template-columns:1fr}.nav-menu{display:inline-flex}nav{gap:10px}.navlinks{width:100%;justify-content:flex-start;gap:12px}.navlinks[data-collapsed="true"] a:not(.btn){display:none}.navlinks a:not(.btn){display:inline-flex;padding:8px 0}.navlinks .nav-cta{min-height:44px}.hero .actions .btn{flex:1 1 180px}.svc .btn{width:100%}}
 @media(max-width:380px){.navlinks .nav-cta{font-size:12px;padding-inline:12px}.app-preview{padding:16px}}
+
+/* Foundation responsive accessibility */
+html{scroll-padding-top:18px}
+.navlinks a:not(.btn){min-height:44px;align-items:center}
+.nav-menu,.navlinks .nav-cta{min-height:44px}
+.btn{line-height:1.35;text-align:center}
+.faq-list summary{min-height:44px;align-content:center}
+.wa-float:focus-visible{outline-offset:4px}
+.svc,.val,.faq-list details,.short{overflow-wrap:anywhere}
+@media(max-width:760px){.navlinks{justify-content:flex-start}.navlinks a:not(.btn){flex:0 1 auto}.hero{padding-block:32px 48px}.hero h1{font-size:clamp(32px,9vw,48px)}.book-grid{gap:28px}.foot{padding-inline-end:82px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Talentify Consultant","url":"https://talentify-consultant.github.io/","logo":"https://talentify-consultant.github.io/logo.png","description":"HR courses and HR consulting in Cairo, Egypt.","telephone":"+201042635352","sameAs":["https://www.instagram.com/talentify.eg/","https://www.linkedin.com/company/147018915/"],"areaServed":{"@type":"Country","name":"Egypt"}}</script>
 </head>
 <body><a class="skip" href="#services" data-i18n="skip">Skip to content</a>
 <div class="band">
@@ -587,5 +599,6 @@ Object.assign(I18N.ar,{"nav_courses":"الكورسات","nav_consult":"الاس�
   apply(pick());
 })();
 </script>
+<script defer src="/analytics.js"></script>
 </body>
 </html>
