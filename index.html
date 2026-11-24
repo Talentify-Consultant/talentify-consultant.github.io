@@ -11,7 +11,13 @@
 <meta content="website" property="og:type"/>
 <link href="favicon.png" rel="icon"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
-<title>Talentify Consultant</title>
+<title>Talentify Consultant | HR Courses &amp; Consulting in Cairo</title>
+<link rel="canonical" href="https://talentify-consultant.github.io/">
+<meta property="og:url" content="https://talentify-consultant.github.io/">
+<meta property="og:image" content="https://talentify-consultant.github.io/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Talentify Consultant">
+<meta name="twitter:description" content="Practical HR courses and professional HR consulting in Cairo.">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -183,17 +189,48 @@ html[lang="ar"] select{background-position:left 12px center}
   .step{padding-inline-end:0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Homepage refresh: brand-led layout and accessible responsive navigation */
+.hero{gap:clamp(24px,5vw,64px)}
+.short{padding:clamp(18px,3vw,30px);box-shadow:0 18px 55px #0003}
+.navlinks{gap:clamp(10px,1.5vw,22px)}
+nav img{min-width:140px;height:auto;max-width:160px}
+.nav-menu{display:none}
+.svc{padding:clamp(20px,3vw,32px);transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--gold)}
+.svc .aud{font-size:12px;color:var(--gold-text);font-weight:600}
+.svc .btn{align-self:flex-start;margin-top:8px;text-align:center}
+.app-promo{background:var(--band);color:var(--band-fg)}
+.app-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,6vw,80px);align-items:center}
+.app-grid h2{font-size:clamp(30px,4.5vw,48px);margin:12px 0 16px}
+.app-grid p{color:var(--band-muted)}
+.app-grid ul{padding-inline-start:22px;margin:20px 0 28px;display:grid;gap:10px}
+.app-grid li::marker{color:var(--mint)}
+.app-preview{border:1px solid var(--band-line);background:#2C2728;border-radius:24px;padding:24px;text-align:center}
+.app-preview img{display:block;width:160px;height:160px;max-width:100%;margin:20px auto 12px;background:white;border:8px solid white;border-radius:12px}
+.app-preview .eyebrow{color:var(--mint)}
+.app-note{font-size:12px;margin-top:14px}
+.faq-list{display:grid;gap:12px;max-width:840px}
+.faq-list details{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:18px 22px}
+.faq-list summary{cursor:pointer;font-weight:600}
+.faq-list p{color:var(--muted);margin-top:12px}
+.wa-float{position:fixed;inset-inline-end:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:9;background:var(--mint);color:var(--ink);border-radius:999px;width:54px;height:54px;display:grid;place-items:center;box-shadow:0 4px 20px #0004;text-decoration:none}
+.wa-float svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8}
+.skip{position:absolute;inset-inline-start:12px;top:-100px;z-index:100;background:var(--mint);color:var(--ink);padding:12px}
+.skip:focus{top:12px}
+.foot{padding-bottom:80px}
+@media(max-width:1000px){nav{flex-wrap:wrap}.navlinks{flex-wrap:wrap;justify-content:flex-end}.navlinks a:not(.btn){display:inline-flex}}
+@media(max-width:760px){.app-grid{grid-template-columns:1fr}.nav-menu{display:inline-flex}nav{gap:10px}.navlinks{width:100%;justify-content:flex-start;gap:12px}.navlinks[data-collapsed="true"] a:not(.btn){display:none}.navlinks a:not(.btn){display:inline-flex;padding:8px 0}.navlinks .nav-cta{min-height:44px}.hero .actions .btn{flex:1 1 180px}.svc .btn{width:100%}}
+@media(max-width:380px){.navlinks .nav-cta{font-size:12px;padding-inline:12px}.app-preview{padding:16px}}
 </style>
 </head>
-<body>
+<body><a class="skip" href="#services" data-i18n="skip">Skip to content</a>
 <div class="band">
 <div class="wrap">
 <nav aria-label="Main">
 <a aria-label="Talentify Consultant home" href="#top"><img alt="Talentify Consultant" src="logo.png"/></a>
-<div class="navlinks">
-<a data-i18n="nav_services" href="#services">Services</a>
-<a data-i18n="nav_how" href="#approach">How we work</a>
-<a data-i18n="nav_principles" href="#principles">Principles</a>
+<button class="btn btn-line nav-menu" type="button" id="menu" aria-expanded="false" aria-controls="navlinks" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks" data-collapsed="true">
+<a data-i18n="nav_courses" href="#courses">Courses</a><a data-i18n="nav_consult" href="#consulting">Consulting</a><a data-i18n="nav_app" href="#app">HR Tools</a><a data-i18n="nav_about" href="#principles">About us</a><a data-i18n="nav_faq" href="#faq">FAQ</a>
 <button aria-label="Switch language" class="btn btn-line nav-cta lang" id="lang" type="button">العربية</button>
 <a class="btn btn-mint nav-cta" data-i18n="cta" href="#book">Book a consultation</a>
 </div>
@@ -202,10 +239,10 @@ html[lang="ar"] select{background-position:left 12px center}
 <div>
 <p class="eyebrow" data-i18n="hero_eyebrow">HR consultancy · Cairo</p>
 <h1 data-i18n-html="hero_h1" style="margin-top:14px">Great teams don't happen by <em>accident.</em></h1>
-<p class="lead" data-i18n="hero_lead">HR courses that build real skills, and consulting that sets up the people side of your company properly. One team for both.</p>
+<p class="lead" data-i18n="hero_lead">Practical HR courses. Professional consulting. Real impact.</p>
 <div class="actions">
 <a class="btn btn-mint" data-i18n="cta" href="#book">Book a consultation</a>
-<a class="btn btn-line" data-i18n="hero_see" href="#services">See our services</a>
+<a class="btn btn-line" data-i18n="hero_see" href="#courses">Explore HR courses</a>
 </div>
 <p class="meta"><span data-i18n="meta1">We reply within 24 hours</span><span data-i18n="meta2">Courses and consulting under one roof</span></p>
 </div>
@@ -229,8 +266,8 @@ html[lang="ar"] select{background-position:left 12px center}
 <p data-i18n="svc_p">Courses or consulting. Each starts with a short conversation about what you need.</p>
 </div>
 <div class="services">
-<article class="svc" style="--c:var(--mint)"><div aria-hidden="true" class="blk"></div><h3 data-i18n="s1t">HR courses</h3><p data-i18n="s1p">Practical HR courses for fresh graduates and working professionals, built around the skills the job market actually asks for.</p><ul><li data-i18n="s1a">Tracks from HR basics to advanced</li><li data-i18n="s1b">Hands-on practice on real cases</li><li data-i18n="s1c">Certificate of completion</li></ul></article>
-<article class="svc" style="--c:var(--gold)"><div aria-hidden="true" class="blk"></div><h3 data-i18n="s2t">HR consulting</h3><p data-i18n="s2p">We help your company run the people side properly: contracts, policies, org structure and payroll, in plain words you can act on.</p><ul><li data-i18n="s2a">Contracts, policies and labor law</li><li data-i18n="s2b">Org structure and job descriptions</li><li data-i18n="s2c">Payroll and insurance setup</li></ul></article>
+<article id="courses" class="svc" style="--c:var(--mint)"><div aria-hidden="true" class="blk"></div><p class="aud" data-i18n="aud1">For graduates & HR professionals</p><h3 data-i18n="s1t">HR courses</h3><p data-i18n="s1p">Practical HR courses for fresh graduates and working professionals, built around the skills the job market actually asks for.</p><ul><li data-i18n="s1a">Tracks from HR basics to advanced</li><li data-i18n="s1b">Hands-on practice on real cases</li><li data-i18n="s1c">Certificate of completion</li></ul><a class="btn btn-ink" href="#book" data-topic="0" data-i18n="ask1">Ask about courses</a></article>
+<article id="consulting" class="svc" style="--c:var(--gold)"><div aria-hidden="true" class="blk"></div><p class="aud" data-i18n="aud2">For business owners & HR teams</p><h3 data-i18n="s2t">HR consulting</h3><p data-i18n="s2p">We help your company run the people side properly: contracts, policies, org structure and payroll, in plain words you can act on.</p><ul><li data-i18n="s2a">Contracts, policies and labor law</li><li data-i18n="s2b">Org structure and job descriptions</li><li data-i18n="s2c">Payroll and insurance setup</li></ul><a class="btn btn-ink" href="#book" data-topic="1" data-i18n="ask2">Discuss your HR needs</a></article>
 </div>
 </div>
 </section>
@@ -251,8 +288,7 @@ html[lang="ar"] select{background-position:left 12px center}
 <section id="principles">
 <div class="wrap">
 <div class="sec-h">
-<p class="eyebrow" data-i18n="nav_principles">Principles</p>
-<h2 data-i18n="pr_h">How we think, and how we talk</h2>
+<p class="eyebrow" data-i18n="why">Why Talentify?</p><h2 data-i18n="why_h">Practical knowledge. People-first solutions.</h2><p data-i18n="why_p">Learn through real cases or build an HR system tailored to your business. We keep the next steps clear.</p>
 </div>
 <div class="values">
 <div class="val"><h3 data-i18n="v1t">People first</h3><p data-i18n="v1p">Every decision starts with the people it affects.</p></div>
@@ -266,7 +302,7 @@ html[lang="ar"] select{background-position:left 12px center}
 </div>
 </div>
 </section>
-<section class="book" id="book">
+<section class="app-promo band" id="app"><div class="wrap app-grid"><div><p class="eyebrow" data-i18n="app_k">TALENTIFY / HR TOOLS</p><h2 data-i18n="app_h">Your HR toolkit. Anywhere.</h2><p data-i18n="app_p">Free access to practical HR tools in your browser. Install Talentify on your home screen for easy access.</p><ul><li data-i18n="app_l1">Annual leave and notice calculators</li><li data-i18n="app_l2">Article 172 gratuity and 2026 insurance estimates</li><li data-i18n="app_l3">10-question HR self-assessment</li></ul><a class="btn btn-mint" href="/app/" data-i18n="app_cta">Explore the app</a><p class="app-note" data-i18n="app_note">Educational estimates, not legal advice.</p></div><div class="app-preview"><p class="eyebrow">TALENTIFY APP</p><img src="data:image/png;base64,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" alt="QR code — Talentify app" width="160" height="160" loading="lazy" decoding="async"><p data-i18n="app_qr">Scan to open the app</p></div></div></section><section id="faq"><div class="wrap"><div class="sec-h"><p class="eyebrow">FAQ</p><h2 data-i18n="faq_h">Frequently asked questions</h2></div><div class="faq-list"><details><summary data-i18n="fq1">Who are the HR courses for?</summary><p data-i18n="fa1">Fresh graduates and working professionals looking to develop practical HR skills.</p></details><details><summary data-i18n="fq2">How do I register for a course?</summary><p data-i18n="fa2">Choose HR course in the request form and tell us your goals. We will discuss suitable options and details with you.</p></details><details><summary data-i18n="fq3">What can consulting help with?</summary><p data-i18n="fa3">Contracts, policies, organisational structure, job descriptions, payroll and insurance setup. The scope is agreed with you.</p></details><details><summary data-i18n="fq4">How do I install the app?</summary><p data-i18n="fa4">Open the app on your phone and use the browser's install or Add to Home Screen option when supported.</p></details><details><summary data-i18n="fq5">Does the form send a booking automatically?</summary><p data-i18n="fa5">No. It prepares a WhatsApp message for you to send. A time is agreed after we respond.</p></details></div></div></section><section class="book" id="book">
 <div class="wrap book-grid">
 <div>
 <p class="eyebrow" data-i18n="cta">Book a consultation</p>
@@ -305,9 +341,9 @@ html[lang="ar"] select{background-position:left 12px center}
 </div>
 <div class="wrap foot">
 <img alt="Talentify Consultant" src="logo.png"/>
-<span data-i18n-html="foot">© 2026 Talentify Consultant. Cairo, Egypt. · <bdi>01042635352</bdi></span>
+<a href="/app/" data-i18n="footer_app">Open Talentify app</a><span data-i18n-html="foot">© 2026 Talentify Consultant. Cairo, Egypt. · <bdi>01042635352</bdi></span>
 </div>
-</footer>
+</footer><a class="wa-float" href="https://wa.me/201042635352" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" id="wa-float"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.2-4.5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8 7c-2 2 2 8 5 9 2 .7 3-1 3-2l-3-1-1 1c-2-1-3-2-4-4l1-1-1-2Z"/></svg></a>
 <script>
 /* All website copy lives here. To edit a sentence, change it below in both languages. */
 var I18N = {
@@ -495,6 +531,8 @@ var I18N = {
  }
 };
 
+Object.assign(I18N.en,{"nav_courses":"Courses","nav_consult":"Consulting","nav_app":"HR Tools","nav_faq":"FAQ","nav_about":"About us","hero_lead":"Practical HR courses. Professional consulting. Real impact.","hero_see":"Explore HR courses","aud1":"For graduates & HR professionals","aud2":"For business owners & HR teams","ask1":"Ask about courses","ask2":"Discuss your HR needs","why":"Why Talentify?","why_h":"Practical knowledge. People-first solutions.","why_p":"Learn through real cases or build an HR system tailored to your business. We keep the next steps clear.","app_k":"TALENTIFY / HR TOOLS","app_h":"Your HR toolkit. Anywhere.","app_p":"Free access to practical HR tools in your browser. Install Talentify on your home screen for easy access.","app_l1":"Annual leave and notice calculators","app_l2":"Article 172 gratuity and 2026 insurance estimates","app_l3":"10-question HR self-assessment","app_cta":"Explore the app","app_qr":"Scan to open the app","app_note":"Educational estimates, not legal advice.","faq_h":"Frequently asked questions","fq1":"Who are the HR courses for?","fa1":"Fresh graduates and working professionals looking to develop practical HR skills.","fq2":"How do I register for a course?","fa2":"Choose HR course in the request form and tell us your goals. We will discuss suitable options and details with you.","fq3":"What can consulting help with?","fa3":"Contracts, policies, organisational structure, job descriptions, payroll and insurance setup. The scope is agreed with you.","fq4":"How do I install the app?","fa4":"Open the app on your phone and use the browser's install or Add to Home Screen option when supported.","fq5":"Does the form send a booking automatically?","fa5":"No. It prepares a WhatsApp message for you to send. A time is agreed after we respond.","wa_float":"Chat on WhatsApp","menu":"Menu","skip":"Skip to content","footer_app":"Open Talentify app","title":"Talentify Consultant | HR Courses & Consulting in Cairo"});
+Object.assign(I18N.ar,{"nav_courses":"الكورسات","nav_consult":"الاستشارات","nav_app":"أدوات HR","nav_faq":"أسئلة شائعة","nav_about":"عنّا","hero_lead":"كورسات HR عملية. استشارات احترافية. تأثير حقيقي.","hero_see":"استكشف كورسات HR","aud1":"لحديثي التخرج ومتخصصي HR","aud2":"لأصحاب الشركات وفرق HR","ask1":"استفسر عن الكورسات","ask2":"ناقش احتياجات شركتك","why":"ليه Talentify؟","why_h":"معرفة عملية. وحلول بتبدأ بالناس.","why_p":"اتعلم من حالات حقيقية أو ابنِ نظام موارد بشرية مناسب لشركتك. بنخلي الخطوات الجاية واضحة.","app_k":"TALENTIFY / أدوات HR","app_h":"أدوات HR معاك في كل مكان.","app_p":"استخدم أدوات الموارد البشرية مجانًا من المتصفح. وثبّت Talentify على الشاشة الرئيسية لسهولة الوصول.","app_l1":"حاسبات الإجازات والإخطار","app_l2":"تقدير مكافأة المادة 172 وتأمينات 2026","app_l3":"تقييم ذاتي للـ HR من 10 أسئلة","app_cta":"استكشف التطبيق","app_qr":"امسح الكود لفتح التطبيق","app_note":"تقديرات للتوعية وليست استشارة قانونية.","faq_h":"الأسئلة الشائعة","fq1":"كورسات HR مناسبة لمين؟","fa1":"لحديثي التخرج والشغالين في المجال اللي عايزين يطوروا مهاراتهم العملية.","fq2":"أسجل في كورس إزاي؟","fa2":"اختار كورس HR في نموذج الطلب وقولنا هدفك، وهنتواصل معاك لمناقشة التفاصيل والاختيارات المناسبة.","fq3":"الاستشارات بتساعد في إيه؟","fa3":"العقود والسياسات والهيكل التنظيمي والوصف الوظيفي وتأسيس المرتبات والتأمينات. بنتفق معاك على نطاق الشغل.","fq4":"أثبّت التطبيق إزاي؟","fa4":"افتح التطبيق على موبايلك واختار تثبيت التطبيق أو إضافة إلى الشاشة الرئيسية من المتصفح لو بيدعمها.","fq5":"هل النموذج بيحجز ميعاد تلقائي؟","fa5":"لأ، بيجهّز رسالة واتساب تبعتها بنفسك. الميعاد بنتفق عليه بعد الرد.","wa_float":"تواصل على واتساب","menu":"القائمة","skip":"انتقل للمحتوى","footer_app":"افتح تطبيق Talentify"});
 (function(){
   var KEY='talentify-site-lang', lang='en';
   var out=document.getElementById('out'),after=document.getElementById('after'),copy=document.getElementById('copy'),form=document.getElementById('req'),btn=document.getElementById('lang');
@@ -505,7 +543,7 @@ var I18N = {
     document.querySelectorAll('[data-i18n]').forEach(function(n){n.textContent=t(n.getAttribute('data-i18n'))});
     document.querySelectorAll('[data-i18n-html]').forEach(function(n){n.innerHTML=t(n.getAttribute('data-i18n-html'))});
     document.querySelectorAll('[data-i18n-ph]').forEach(function(n){n.placeholder=t(n.getAttribute('data-i18n-ph'))});
-    btn.textContent=t('switch'); btn.setAttribute('aria-label',t('switch_label'));
+    btn.textContent=t('switch'); btn.setAttribute('aria-label',t('switch_label')); document.getElementById('wa-float').setAttribute('aria-label',t('wa_float'));
     if(out.classList.contains('on')) build();
   }
   function pick(){
@@ -541,6 +579,11 @@ var I18N = {
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(x).then(ok,sel)}else{sel()}
     });
   });
+  var menu=document.getElementById('menu'), links=document.getElementById('navlinks');
+  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.dataset.collapsed=String(!open)});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.setAttribute('aria-expanded','false');links.dataset.collapsed='true'})});
+  document.querySelectorAll('[data-topic]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('t').selectedIndex=Number(a.dataset.topic);if(out.classList.contains('on'))build()})});
+  ['n','c','m'].forEach(function(id){document.getElementById(id).addEventListener('input',function(){if(out.classList.contains('on'))build()})});
   apply(pick());
 })();
 </script>
